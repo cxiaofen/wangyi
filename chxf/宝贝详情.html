@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/iconfont1/iconfont.css">
+    <style>
+		.wrap{
+			width: 1090px;
+			margin: 0 auto;
+		}
+		.header{
+          width: 1090px;
+          margin: 0 auto;
+        }
+        .header .title{
+            height: 150px;
+        }
+        .row{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .row{
+            height: 40px;
+        	background-color: #333333;
+        	/*position: relative;*/
+        }
+        .row > p{
+        	width: 300px;
+        	position: relative;
+        	top: 10px;
+            left: 100px;
+        	color: #cccccc;
+        }
+        .row > p:nth-child(1){
+            left: 100px;
+        }
+        .row > p:nth-child(2){
+            left: 300px;
+            top: -9px;
+            text-decoration: underline;
+        }
+        .row > p:hover{
+        	color: #ffffff;
+        }
+        .row > ul{
+            float: right;
+        }
+        .row::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .row >ul >li{
+            float: left;
+            text-align: center;
+            border-right: 1px solid #cccccc;
+            position: relative;
+            top: -30px;
+            left: -130px;
+        }
+        .row > ul > li > a{
+        	color: #cccccc;
+        }
+        .row >ul >li >a:hover{
+        	color: #ffffff;
+        }
+        .row >ul >li:nth-child(1),
+        .row >ul >li:nth-child(2),
+        .row >ul >li:nth-child(4),
+        .row >ul >li:nth-child(8){
+        	width: 50px;
+
+        }
+        .row >ul >li:nth-child(3),
+        .row >ul >li:nth-child(5),
+        .row >ul >li:nth-child(6),
+        .row >ul >li:nth-child(7){
+            width: 80px;
+        }
+        .row > ul::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .row >ul > li:hover .tip1,
+        .row >ul > li:hover .tip2{
+        	display: block;
+        }
+        .row .tip1{
+        	width: 90px;
+        	height: 172px;
+        	background-color: #fff;
+        	position: absolute;
+        	top: 135%;
+        	left: -10px;
+            display: none;
+            border: 0.5px solid #ccc;
+            box-shadow: 2px 2px 2px #ccc;
+        }
+        .tip1 > ul >li{
+            width: 80px;
+            height: 38px;
+            margin: 0 auto;
+            line-height: 3em;
+            color: #ccc;
+            border-bottom: 1px solid #ccc;
+            z-index: 1;
+        }
+        .row .tip2{
+        	width: 150px;
+        	height: 150px;
+        	background-color: #fff;
+        	position: absolute;
+        	top: 142%;
+        	right: -45px;
+            display: none;
+             border: 0.5px solid #ccc;
+            box-shadow: 2px 2px 2px #999;
+            z-index: 1;
+        }
+        .row .tip2 > p{
+        	color: #333
+        }
+        .header .title > img{
+        	position: absolute;
+        	left: 50%;
+            margin-left: -100px;
+            top: 80px;
+        }
+        .title .lists{
+           width: 260px;
+           height: 30px;
+           border:none;
+           border-bottom: 1px solid #b4a078;
+           position: relative;
+           top: 70px;
+           left: 800px;
+        }
+        .icon-search{
+            font-size: 25px;
+            color: #b4a078;
+            position: relative;
+            top: 40px;
+            left: 1050px;
+        }
+        .icon-gouwuche{
+            font-size: 25px;
+            color: #b4a078;
+            position: relative;
+            top: 40px;
+            left: 1070px;
+        }
+       /* .title #browsers{
+        	color: red;
+        }*/
+        .nav::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+		.nav > li{
+			width: 90px;
+			text-align: center;
+			line-height: 3em;
+			float: left;
+		}
+		.nav > li > a::after{
+			content: "";
+			height: 2px;
+			background-color:  #b4a078;
+			width: 2em;
+			margin: 0 auto;
+			position: relative;
+			top:-.5em;
+			display: none;
+		}
+		.nav > li:hover > a{
+			color:  #b4a078;
+		}
+		.nav > li:hover > a::after {
+			display: block;
+		}
+		.nav > li:hover > .sub-nav{
+			display: block;
+		}
+        .sub-nav{
+        	position: absolute;
+        	width: 100%;
+        	background-color:#ffffff;
+        	left: 0;
+        	display: none;
+        	z-index: 1;  
+        }
+        .sub-nav > ul{
+        	width: 1090px;
+        	margin: 0 auto;
+        }
+        .sub-nav > ul >li{
+        	float: left;
+        	width: 100px;
+        }
+        .sub-nav > ul::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .footer .top{
+        	height: 300px;
+        	background-color: #ffffff;
+        }
+        .footer .bottom{
+            height: 195px;
+            background-color: #414141;
+        }
+        .top-content{
+            width:1090px;
+            margin: 0 auto;
+
+        }        
+        .top-content > ul > li{
+            box-sizing: border-box;
+        	float: left;
+        	width: 362px;
+            height: 200px;
+            background-color: #ffffff;
+            margin: 3em auto;
+            padding: 0 20px;
+            text-align: center;
+            
+        }
+        .top-content > ul::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .footer .top-content >ul > li:nth-child(1),
+        .footer .top-content >ul > li:nth-child(2){
+            border-right: 1px solid #e9e9e9;
+        }
+        .top-content > ul > li >h3{
+        	line-height: 3em;
+        }
+        .top-content > ul > li >p{
+        	line-height: 2em;
+        }
+        .one{
+            box-sizing: border-box;
+        	width: 1090px;
+        	height: 120px;
+        	border-bottom: 1px solid #4f4f4f;
+        	margin: 0 auto;
+            padding: 3em 4em;
+        	
+        }
+        .two{
+        	width: 1090px;
+        	height: 60px;
+        	margin:1em auto;
+        	background-color:#414141;
+            color: #999075;
+        }
+        .bottom .links > li >a{
+        	float: left;
+        	width: 100px;
+        	height: 20px;
+        	color: #999075;
+        	text-align: center;
+        	border-right: 1px solid #999075;
+        	
+        }
+        .bottom .links::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .bottom .one > ul >li{
+            width: 300px;
+            height: 40px;
+            float: left;
+            text-align: center;
+  
+        }
+        .bottom .one >ul::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .bottom .one ul > li >p{
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            color: #ffffff;
+            margin-left: 60px;
+            text-align:left;
+        }
+        
+        .yonghu >i{
+            font-size: 35px;
+        }
+       .guanzhu *{
+             display: inline;
+       }
+        .guanzhu >i{
+            font-size: 26px;
+        }
+        .circle{
+            float: left;
+            width: 40px;
+            height:40px;
+            border-radius: 50%;
+            border: 1px solid #ffffff;
+        }
+        .circle > i{
+            font-size: 30px;
+            color: #ffffff;
+        }
+        .top-content .serve{
+            width: 240px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+        .top-content .serve >li{
+            box-sizing: border-box;
+            float: left;
+            width: 90px;
+            height: 100px;
+            padding: 1em 1em;
+            border: 1px solid #ccc;
+            margin: 1em 1em;
+        }
+        .top-content .serve::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .top-content .guanzhu{
+            height: 40px;
+            line-height: 40px;
+            text-align: left;
+            margin-top: 20px;
+            background-color: #ffffff;
+        }
+        .content .biaoti >a{
+            font-size: 14px;
+            line-height: 50px;
+        }
+        .three > ul >li{
+        	float: left;
+        	width: 520px;
+        	height: 380px;
+        	background-color: #fff;
+        	margin-right: 40px;
+        }
+        .three > ul::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .three > ul >li:nth-child(2){
+        	margin-right: 0px;
+        }
+        .four{
+        	position: relative;
+        }
+        .three .four > ul > li{
+            float: left;
+            background-color: #f4f4f4;
+            cursor: pointer;
+        }
+        .three .four > ul::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .four .sub-nav2{
+        	position: absolute;
+        	width: 380px;
+        	height: 380px;
+        	left: 0px;
+        	background-color: #fff;
+        }
+        .four > ul >li:nth-child(3) .sub-nav2{
+        	top: 0px;
+        	display: none;
+        }
+        .four > ul >li:nth-child(4) .sub-nav2{
+        	top: 0px;
+            display: none;
+        }
+        .four > ul >li:nth-child(5) .sub-nav2{
+        	top: 0px;
+            display: none;
+        }
+        .four > ul >li:nth-child(6) .sub-nav2{
+        	top: 0px;
+            display: none;
+        }
+        .four > ul >li:hover .sub-nav2{
+        	display: block;
+        }
+        .sub-nav2 > img{
+        	width: 380px;
+        }
+        .three .four > ul > li:nth-child(1){
+        	width:380px;
+        	height: 380px;
+        	margin-right: 30px;
+        }
+        .three .four > ul > li:nth-child(1)~*{
+        	width: 72px;
+        	height: 72px;
+        	margin-bottom: 5px;
+        }
+        .three .four > ul > li:last-child{
+        	margin-bottom: 0px;
+        }
+        .three .four > ul > li >img{
+        	width: 72px;
+        	height: 72px;
+        }
+        .three > ul > li:nth-child(2) > h2{
+        	display: inline;
+            
+        }
+        .tp > img{
+           margin-left: 6px;
+        }
+        .three .five >li{
+        	float: left;
+        	width: 60px;
+        	height: 60px;
+        	margin-right: 10px;
+        	background-color: #f4f4f4;
+        	margin-top: 10px;
+        	border: 1px solid #ccc;
+        }
+        .three .five::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .three .five > li >p{
+        	line-height: 60px;
+        }
+        .three .five > li >img{
+        	width: 60px;
+        }
+        .three .five > li:first-child{
+        	background-color: #fff;
+        	border: none;
+        }
+        .three .goumai >ul >li{
+        	float: left;
+        	margin-top: 15px;
+        	margin-left: 20px;
+        }
+        .three .goumai >ul::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .three .goumai >ul >li:nth-child(1){
+        	width: 160px;
+        	height: 50px;
+        	background-color: #f5f3ef;
+        	border: 1px solid #b4a078;
+        }
+        .three .goumai >ul >li:nth-child(2){
+        	width: 160px;
+        	height: 50px;
+        	background-color: #b4a078;
+        }
+        .three .goumai >ul >li:nth-child(3){
+        	width: 50px;
+        	height: 50px;
+        	background-color: #fff;
+        	border: 1px solid #ccc;
+        }
+        .three .goumai p{
+        	text-align: center;
+        	line-height: 50px;
+        	font-size: 20px;
+        	cursor: pointer;
+        }
+        .content .look{
+        	height: 300px;
+        	margin: 2em auto;
+        	background-color: #fff;
+        }
+        .look .look-top{
+        	box-sizing: border-box;
+        	padding: 9px 20px;
+        	height: 40px;
+        	background-color: #f5f5f5;
+        }
+        .look .look-top >p{
+        	font-size: 18px;
+        }
+        .look .look-bottom{
+        	box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+        .look .look-bottom > ul >li{
+        	float: left;
+        	width: 271px;
+        	height: 260px;
+        	background-color:#ffffff;
+        }
+        .look .look-bottom > ul::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .look .look-bottom p{
+        	text-align: center;
+        }
+        .look .look-bottom p:hover{
+        	color: #ceaca1;
+        	cursor: pointer;
+        }
+        .look .look-bottom > ul >li >img{
+        	transition: transform 1s;
+        }
+        .look .look-bottom > ul >li >img:hover{
+        	transform: scale(1.1);
+        }
+        .xiangqi >ul >li{
+        	float: left;
+        	margin-right: 60px;
+        }
+        .xiangqi >ul::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .xiangqi >ul >li:nth-child(1){
+        	width: 600px;
+            background-color: #ffffff;
+        }
+        .xiangqi >ul >li:nth-child(2){
+        	background-color: #ffffff;
+        	margin-right: 0px;
+        	border: 1px solid #ccc;
+        }
+        .xiangqi .xiangqi-lt div{
+        	height: 30px;
+        }
+        .xiangqi .xiangqi-lt div >p{
+            font-size: 16px;
+        	line-height: 30px;
+        }
+
+        .xiangqi .xiangqi-rt{
+        	height: 40px;
+        	background-color: #f5f5f5;
+        }
+        .xiangqi .xiangqi-rt > p{
+        	font-size: 16px;
+        	line-height: 40px;
+        	text-align: center;
+        }
+        .product{
+        	width: 380px;
+        	height: 1800px;
+        	box-sizing: border-box;
+        	padding-left: 40px;
+        }
+        .xiangqi .product >ul >li{
+        	width: 300px;
+        	height: 290px;
+        	border-bottom: 1px solid #ccc;
+        }
+        .xiangqi .product >ul >li:last-child{
+        	border-bottom: 0px;
+        }
+        .product >ul >li >p{
+        	font-size: 16px;
+        	text-align: center;
+        }
+	</style>
+</head>
+<body>
+	<div class="container">
+	    <div class="row">
+	    	<p>好的生活，没那么贵</p>
+	    	<p>[严选X中行联名卡]达标领80元礼品卡></p>
+	    	<!-- <p>[福利] 下载严选APP,抢1元包邮团</p> -->
+	    	<ul>
+	    		<li><a href="">登录</a></li>
+	    		<li><a href="">注册</a></li>
+	    		<li><a href="">我的订单</a></li>
+	    		<li><a href="">会员</a></li>
+	    		<li><a href="">甄选家</a></li>
+	    		<li><a href="">企业采购</a></li>
+	    		
+	    		<li>
+	    		    <a href="">客户服务</a>
+                    <div class="tip1">
+                    	<ul>
+                    		<li><a href="">在线客服</a></li>
+                    		<li><a href="">帮助中心</a></li>
+                    		<li><a href="">商务合作</a></li>
+                    		<li><a href="">平台开放</a></li>
+                    	</ul>
+                    </div>
+	    		</li>
+	    		<li>
+	    		    <a href="">APP</a>
+	    		    <div class="tip2">
+	    		    	<img src="./images/62.png" alt="">
+	    		    	<p>下载领1000元新人礼包</p>
+	    		    </div>
+	    		</li>
+	    	</ul>
+	    </div>
+		<div class="header">
+		    <div class="title">
+		    	<img src="./images/yx.png" alt="图片找不到了">
+		    	<form action="GET" class="form">
+		    		<input type="text" list="browsers" class="lists" placeholder="甜品鲜花七夕浪漫上新">
+		    		<datalist id="browsers">
+		    			<option value="七夕美食99选9"></option>
+		    			<option value="七夕定制礼物"></option>
+		    			<option value="床品满300减100"></option>
+		    			<option value="爆款电器特价"></option>
+		    			<option value="洗护美妆买4减1"></option>
+		    		</datalist>
+		    	</form>
+		    	<i class="iconfont icon-search" ></i>
+		    	<i class="iconfont icon-gouwuche"></i>
+		    </div>
+			<ul class="nav">
+				<li><a href="#">首页</a></li>
+				<li>
+				   <a href="#">居家</a>
+				   <div class="sub-nav">
+				   	    <ul>
+				   	        <li><img src="./image/1.png" alt=""><br><a href="">夏凉</a></li>
+				   	        <li><img src="./image/2.png" alt=""><br><a href="">床品件套</a></li>
+				   	        <li><img src="./image/3.png" alt=""><br><a href="">被枕</a></li>
+                   	        <li><img src="./image/4.png" alt=""><br><a href="#">家居</a></li>
+                   	        <li><img src="./image/5.png" alt=""><br><a href="#">灯具</a></li>
+                   	        <li><img src="./image/6.png" alt=""><br><a href="#">收纳</a></li>
+                   	        <li><img src="./image/7.png" alt=""><br><a href="">布衣软装</a></li>
+                   	        <li><img src="./image/8.png" alt=""><br><a href="">家饰</a></li>
+                   	        <li><img src="./image/9.png" alt=""><br><a href="">旅行用品</a></li>
+                   	        <li><img src="./image/10.png" alt=""><br><a href="">晾晒除味</a></li>
+                   	        <li><img src="./image/11.png" alt=""><br><a href="">家庭医疗</a></li>
+                   	        <li><img src="./image/12.png" alt=""><br><a href="">宠物</a></li>
+                        </ul>
+				   </div>
+                   
+				</li>
+				<li>
+				    <a href="#">鞋包配饰</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/13.png" alt=""><br><a href="">行李箱</a></li>
+				    	    <li><img src="./image/14.png" alt=""><br><a href="">女士包袋</a></li>
+				    	    <li><img src="./image/15.png" alt=""><br><a href="">男士包袋</a></li>
+				    	    <li><img src="./image/16.png" alt=""><br><a href="">钱包及小皮件</a></li>
+				    	    <li><img src="./image/17.png" alt=""><br><a href="">女鞋</a></li>
+				    	    <li><img src="./image/18.png" alt=""><br><a href="">男鞋</a></li>
+				    	    <li><img src="./image/19.png" alt=""><br><a href="">拖鞋</a></li>
+				    	    <li><img src="./image/20.png" alt=""><br><a href="">鞋配</a></li>
+				    	    <li><img src="./image/21.png" alt=""><br><a href="">袜子</a></li>
+				    	    <li><img src="./image/22.png" alt=""><br><a href="">丝袜</a></li>
+				    	    <li><img src="./image/23.png" alt=""><br><a href="">配饰</a></li>
+				    	    <li><img src="./image/24.png" alt=""><br><a href="">眼镜</a></li>
+				    	    <li><img src="./image/25.png" alt=""><br><a href="">围巾件套</a></li>
+				        </ul>
+                      </div>
+				</li>
+				<li>
+				    <a href="#">服装</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/26.png" alt=""><br><a href="">T恤</a></li>
+				    	    <li><img src="./image/28.png" alt=""><br><a href="">牛仔</a></li>
+				    	    <li><img src="./image/27.png" alt=""><br><<a href="">运动</a></li>
+				    	    <li><img src="./image/30.png" alt=""><br><a href="">女士上装</a></li>
+				    	    <li><img src="./image/31.png" alt=""><br><a href="">女士外套</a></li>
+				    	    <li><img src="./image/32.png" alt=""><br><a href="">女士下装</a></li>
+				    	    <li><img src="./image/33.png" alt=""><br><a href="">男士上装</a></li>
+				    	    <li><img src="./image/34.png" alt=""><br><a href="">男士下装</a></li>
+				    	    <li><img src="./image/35.png" alt=""><br><a href="">男士外套</a></li>
+				    	    <li><img src="./image/36.png" alt=""><br><a href=""></a></li>
+				    	    <li><img src="./image/37.png" alt=""><br><a href=""></a></li>
+				    	    <li><img src="./image/38.png" alt=""><br><a href="">男士家居服</a></li>
+				    	    <li><img src="./image/39.png" alt=""><br><a href="">女士家居服</a></li>
+				        </ul>
+                     </div>
+				</li>
+				<li>
+				    <a href="#">电器</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/40.png" alt=""><br><a href="">生活电器</a></li>
+				    	    <li><img src="./image/41.png" alt=""><br><a href="">厨房电器</a></li>
+				    	    <li><img src="./image/42.png" alt=""><br><a href="">个人健康</a></li>
+				    	    <li><img src="./image/43.png" alt=""><br><a href="">数码</a></li>
+				    	    <li><img src="./image/44.png" alt=""><br><a href="">影视娱乐</a></li>
+				    	</ul>
+                    </div>
+				</li>
+				<li>
+				    <a href="#">洗护</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/45.png" alt=""><br><a href="">纸品湿巾</a></li>
+				    	    <li><img src="./image/46.png" alt=""><br><a href="">家庭清洁</a></li>
+				    	    <li><img src="./image/47.png" alt=""><br><a href="">生理用品</a></li>
+				    	    <li><img src="./image/48.png" alt=""><br><a href="">浴室用具</a></li>
+				    	    <li><img src="./image/49.png" alt=""><br><a href="">毛巾</a></li>
+				    	    <li><img src="./image/50.png" alt=""><br><a href="">美妆</a></li>
+				    	    <li><img src="./image/51.png" alt=""><br><a href="">香氛</a></li>
+				    	    <li><img src="./image/52.png" alt=""><br><a href="">面部口腔护理</a></li>
+				    	    <li><img src="./image/53.png" alt=""><br><a href="">身体护理</a></li>
+				    	    <li><img src="./image/54.png" alt=""><br><a href="">洗发护发</a></li>
+				    	</ul>
+                    </div>
+				</li>
+				<li>
+				    <a href="#">饮食</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/55.png" alt=""><br><a href="">甜品鲜花</a></li>
+				    	    <li><img src="./image/56.png" alt=""><br><a href="">糕点</a></li>
+				    	    <li><img src="./image/57.png" alt=""><br><a href="">小食</a></li>
+				    	    <li><img src="./image/58.png" alt=""><br><a href="">坚果炒货</a></li>
+				    	    <li><img src="./image/59.png" alt=""><br><a href="">果干</a></li>
+				    	    <li><img src="./image/60.png" alt=""><br><a href="">肉类零食</a></li>
+				    	    <li><img src="./image/61.png" alt=""><br><a href="">冲饮</a></li>
+				    	    <li><img src="./image/62.png" alt=""><br><a href="">茗茶</a></li>
+				    	    <li><img src="./image/63.png" alt=""><br><a href="">酒水饮料</a></li>
+				    	    <li><img src="./image/64.png" alt=""><br><a href="">方便食品</a></li>
+				    	    <li><img src="./image/65.png" alt=""><br><a href="">食材</a></li>
+				    	    <li><img src="./image/66.png" alt=""><br><a href="">调味</a></li>
+				    	    <li><img src="./image/67.png" alt=""><br><a href="">滋补保健</a></li>
+				    	    <li><img src="./image/68.png" alt=""><br><a href="">生鲜</a></li>
+				        </ul>
+                    </div>
+				</li>
+				<li>
+				    <a href="#">餐厨</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/69.png" alt=""><br><a href="">水具杯壶</a></li>
+				    	    <li><img src="./image/70.png" alt=""><br><a href="">餐具</a></li>
+				    	    <li><img src="./image/71.png" alt=""><br><a href="">锅具</a></li>
+				    	    <li><img src="./image/72.png" alt=""><br><a href="">清洁保鲜</a></li>
+				    	    <li><img src="./image/73.png" alt=""><br><a href="">厨房配件</a></li>
+				    	    <li><img src="./image/74.png" alt=""><br><a href="">刀剪</a></li>
+				    	    <li><img src="./image/75.png" alt=""><br><a href="">茶具咖啡具酒具</a></li>
+				    	</ul>
+                    </div>
+				</li>
+				<li>
+				    <a href="#">婴童</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/76.png" alt=""><br><a href="">暑期好物</a></li>
+				    	    <li><img src="./image/77.png" alt=""><br><a href="">新生儿服装</a></li>
+				    	    <li><img src="./image/78.png" alt=""><br><a href="">小童服装</a></li>
+				    	    <li><img src="./image/79.png" alt=""><br><a href="">中大童服装</a></li>
+				    	    <li><img src="./image/80.png" alt=""><br><a href="">内衣配搭</a></li>
+				    	    <li><img src="./image/81.png" alt=""><br><a href="">童鞋童包</a></li>
+				    	    <li><img src="./image/82.png" alt=""><br><a href="">婴童洗护</a></li>
+				    	    <li><img src="./image/83.png" alt=""><br><a href="">孕产</a></li>
+				    	    <li><img src="./image/84.png" alt=""><br><a href="">寝居</a></li>
+				    	    <li><img src="./image/85.png" alt=""><br><a href="">喂养</a></li>
+				    	    <li><img src="./image/86.png" alt=""><br><a href="">玩具</a></li>
+				    	    <li><img src="./image/87.png" alt=""><br><a href="">婴童出行</a></li>
+				    	</ul>
+                     </div>
+				</li>
+				<li>
+				    <a href="#">文体</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/88.png" alt=""><br><a href="">文具</a></li>
+				    	    <li><img src="./image/89.png" alt=""><br><a href="">运动户外</a></li>
+				    	    <li><img src="./image/90.png" alt=""><br><a href="">唱片</a></li>
+				    	    <li><img src="./image/91.png" alt=""><br><a href="">礼品卡</a></li>
+				    	    <li><img src="./image/92.png" alt=""><br><a href="">游戏点卡</a></li>
+				    	    <li><img src="./image/93.png" alt=""><br><a href="">暴雪周边</a></li>
+				    	    <li><img src="./image/94.png" alt=""><br><a href="">我的世界</a></li>
+				    	    <li><img src="./image/95.png" alt=""><br><a href="">梦幻西游</a></li>
+				    	    <li><img src="./image/96.png" alt=""><br><a href="">大话西游</a></li>
+				    	    <li><img src="./image/97.png" alt=""><br><a href="">阴阳师</a></li>
+				    	    <li><img src="./image/98.png" alt=""><br><a href="">游戏表情</a></li>
+				    	    <li><img src="./image/99.png" alt=""><br><a href="">影视周边</a></li>
+				    	    <li><img src="./image/100.png" alt=""><br><a href="">动漫电玩</a></li>
+				     
+                        </ul>
+                    </div>
+				</li>
+				<li>
+				    <a href="#">特色区</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/101.png" alt=""><br><a href="">日本馆</a></li>
+				    	    <li><img src="./image/102.png" alt=""><br><a href="">韩国馆</a></li>
+				    	    <li><img src="./image/103.png" alt=""><br><a href="">东南亚馆</a></li>
+				    	    <li><img src="./image/104.png" alt=""><br><a href="">欧美馆</a></li>
+				    	    <li><img src="./image/105.png" alt=""><br><a href="">澳新馆</a></li>
+				    	    <li><img src="./image/106.png" alt=""><br><a href="">制造馆</a></li>
+				    	    <li><img src="./image/107.png" alt=""><br><a href="">春风馆</a></li>
+				    	    <li><img src="./image/108.png" alt=""><br><a href="">未央馆</a></li>
+				    	    <li><img src="./image/109.png" alt=""><br><a href="">云音乐周边馆</a></li>
+				    	    <li><img src="./image/110.png" alt=""><br><a href="">严选推荐馆</a></li>
+				    	</ul>
+                  </div>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+            <div class="wrap">
+			    <div class="biaoti">
+				    <a href="#">首页></a>
+				    <a href="#">电器></a>
+				    <a href="#">个护健康></a>
+				    <a href="#">全净皓齿变速式声波电动牙刷</a>
+			    </div>
+			    <div class="three">
+			    	<ul>
+			    		<li>
+                            <div class="four">
+			    			    <ul>
+			    				    <li></li>
+			    				    <li>
+			    				        <div class="sub-nav2">
+			    				        	<img src="./images/78.png" alt="">
+			    				        </div>
+			    				   	    <img src="./images/73.png" alt="">
+			    				    </li>
+			    				    <li>
+                                        <div class="sub-nav2">
+                                        	<img src="./images/79.jpg" alt="">
+                                        </div>
+			    				   	    <img src="./images/74.jpg" alt="">
+			    				    </li>
+			    				    <li>
+			    				        <div class="sub-nav2">
+			    				        	<img src="./images/80.jpg" alt="">
+			    				        </div>
+			    				   	    <img src="./images/75.jpg" alt="">
+			    				    </li>
+			    				    <li>
+			    				        <div class="sub-nav2">
+			    				        	<img src="./images/81.jpg" alt="">
+			    				        </div>
+			    				   	    <img src="./images/76.jpg" alt="">
+			    				    </li>
+			    				    <li>
+			    				        <div class="sub-nav2">
+			    				        	<img src="./images/82.jpg" alt="">
+			    				        </div>
+			    				   	    <img src="./images/77.jpg" alt="">
+			    				   </li>
+			    			    </ul>
+			    			</div>
+			    		</li>
+			    		<li>
+			    			<h2 style="margin-right: 165px">全净皓齿变速式声波电动牙刷</h2>
+                            <h2 style="color: red">98.3%</h2>
+                            <a href="#">999+好评爆款，洁齿又护龈</a>
+                            <a href="#">好评率</a>
+                            <div class="tp">
+                            	<img src="./images/67.png" alt=""><a href="#"></a></img>
+                            </div>
+                            <ul class="five">
+                            	<li>
+                            		<p>颜色</p>
+                            	</li>
+                            	<li>
+                            		<img src="./images/68.png" alt="">
+                            	</li>
+                            	<li>
+                            		<img src="./images/69.png" alt="">
+                            	</li>
+                            	<li>
+                            		<img src="./images/70.png" alt="">
+                            	</li>
+                            	<li>
+                            		<img src="./images/71.png" alt="">
+                            	</li>
+                            	<li>
+                            		<img src="./images/72.png" alt="">
+                            	</li>
+                            </ul>
+                            <div class="goumai">
+                            	<ul>
+                            		<li>
+                            			<p style="color:#b4a078">立即购买</p>
+                            		</li>
+                            		<li>
+                            			<!-- <i class="iconfont icon-cart-copy"></i> -->
+                            			<p style="color: #fff">加入购物车</p>
+                            		</li>
+                            		<li>
+                            		    <!-- <i></i> -->
+                            			<p style="font-size:14px;">收藏</p>
+                            		</li>
+                            	</ul>
+                            </div>
+			    		</li>
+			    	</ul>
+                </div>
+                <div class="look">
+                	<div class="look-top">
+                		<p>大家都在看</p>
+                	</div>
+                	<div class="look-bottom">
+                		<ul>
+                			<li>
+                				<img src="./images/83.png" alt="">
+                                 <p>日式和风声波士电动牙刷</p>
+                                 <p>129</p>
+                			</li>
+                			<li>
+                				<img src="./images/84.png" alt="">
+                				<p>日式和风声波士便携电动牙刷</p>
+                                 <p>199</p>
+                			</li>
+                			<li>
+                				<img src="./images/85.png" alt="">
+                				<p>日式极简声波电动牙刷</p>
+                                 <p>69</p>
+                			</li>
+                			<li>
+                				<img src="./images/86.png" alt="">
+                				<p>日式清新电动牙刷</p>
+                                 <p>19.9</p>
+                			</li>
+                		</ul>
+                	</div>
+                </div>
+                <div class="xiangqi">
+                	<ul>
+                		<li> 
+                            <div class="xiangqi-lt">
+                	    	    <p>详情</p>
+                	        </div>
+                	        <img src="./images/90.png" alt="">
+                        </li>
+                		<li>
+                		    <div class="xiangqi-rt">
+                		    	<p>24小时热销榜</p>
+                		    </div>
+                		    <div class="product">
+                		        <ul>
+                		    	    <li>
+                		    	    	<img src="./images/87.png" alt="">
+                		    	    	<p>玩趣彩虹四季拖鞋</p>
+                		    	    </li>
+                		    	    <li>
+                		    	    	<img src="./images/88.png" alt="">
+                		    	    	<p>严选礼品卡100元面值</p>
+                		    	    </li>
+                		    	    <li>
+                		    	    	<img src="./images/89.png" alt="">
+                		    	    	<p>鲜果冻 180g</p>
+                		    	    </li>
+                		    	    <li>
+                		    	    	<img src="./images/91.png" alt="">
+                		    	    	<p><古风一木 小卷纸/p>
+                		    	    </li>
+                		    	    <li>
+                		    	    	<img src="./images/92.png" alt="">
+                		    	    	<p>蛋糕</p>
+                		    	    </li>
+                		    	    <li>
+                		    	    	<img src="./images/93.png" alt="">
+                		    	    	<p>湿巾</p>
+                		    	    </li>
+                		        </ul>
+                		    </div>
+                	    </li>
+                	</ul>
+                </div>
+            </div>
+		</div>
+	  <div class="footer">
+		<div class="top">
+            <div class="top-content">
+                <ul>
+                    <li>
+                        <h3>客户服务</h3>
+                        <ul class="serve">
+                            <li class="zaixian">
+                                <i class="iconfont icon-kefu" style="font-size:35px"></i>
+                                <p>在线客服</p>
+                            </li>
+                            <li  class="yonghu">
+                                <i class="iconfont icon-fankui" style="font-size:35px"></i>
+                                <p>用户反馈</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>何为严选</h3>
+                        <p>网易原创生活类电商品牌，秉承网易一贯的严谨态<br>
+                           度，我们深入世界各地，从源头全程严格把控商品<br>
+                           生产环节，力求帮消费者甄选到优质的商品
+                        </p>
+                        <div class="guanzhu">
+                            <p>关注我们 :</p>
+                            <i class="iconfont icon-weibo1" style="color:red"></i>
+                            <i class="iconfont icon-yixin1" style="color:blue"></i>
+                            <i class="iconfont icon-weixin" style="color:green"></i>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <h3>扫码下载严选APP</h3>
+                        <img src="./images/0.png" alt="">
+                        <p>下载领1000元新人礼包</p>
+                    </li>
+                </ul>
+            	
+            </div>
+		</div>
+		<div class="bottom">
+			<div class="one">
+			    <ul>
+                    <li>
+                        <div class="circle">
+                            <i class="iconfont icon-anquan"></i>
+                        </div>
+                        <p>30天无忧退换货</p>
+                    </li>
+                    <li>
+                        <div class="circle">
+                            <i class="iconfont icon-huoche"></i>
+                        </div>
+                        <p>满88元免邮费</p>
+                    </li>
+                    <li>
+                        <div class="circle">
+                            <i class="iconfont icon-yi"></i>
+                        </div>
+                        <p>网易品质保证</p>
+                    </li>
+                </ul>
+			    
+			</div>
+			<div class="two">
+				<ul class="links">
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">帮助中心</a></li>
+					<li><a href="#">售后服务</a></li>
+					<li><a href="#">配送与验收</a></li>
+					<li><a href="#">商务合作</a></li>
+					<li><a href="#">企业采购</a></li>
+					<li><a href="#">开放平台</a></li>
+					<li><a href="#">搜索推荐</a></li>
+					<li><a href="#">友情链接</a></li>
+				</ul>
+				<p>网易公司版权所有 © 1997-2018   食品经营许可证：JY13301080111719 出版物经营许可证：新出发滨字第0132号 单用途商业预付卡备案证：330100AAC0024</p>
+			</div>
+		</div>
+
+	  </div>
+</body>
+</html>

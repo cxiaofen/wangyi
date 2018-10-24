@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/iconfonts/iconfont.css">
+	<style>
+	    body{
+	    	height: 100%;
+	    	background-image: url(./images/66.png);
+	    }
+        .cotainer{
+	    	position: fixed;
+	    	top: 0;
+	    	left: 0;
+	    	bottom: 0;
+	    	right: 0;
+	    	background-color: #312c2d;
+	    	opacity: 0.9;
+	    }
+		.content{
+			width: 310px;
+			height: 320px;
+			background-color: #fff;
+			position: relative;
+			top: 50%;
+            margin-top: -200px;
+            left: 50%;
+            margin-left: -175px;
+		}
+		.denglu{
+            width: 300px;
+            margin: 0 auto;
+            
+        }
+		.denglu > ul >li{
+			width: 149px;
+			float:left;
+            text-align: center;
+            cursor: pointer;
+        }
+		.denglu > ul >li:nth-child(2){
+            border-left: 1px solid #333;
+		}
+		.denglu > ul::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.denglu > ul >li:nth-child(2):hover{
+			color: #b4a078;
+		}
+		.content .dlu{
+			width: 250px;
+			height: 40px;
+			margin: 2em auto;
+			background-color: #b4a078;
+		}
+		.content .dlu > p{
+			text-align: center;
+            line-height: 40px;
+            /*cursor: pointer;*/
+		}
+		.footer > div{
+			float: left;
+			width: 155px;
+			height: 50px;
+			background-color: #f5f3ef;
+		}
+		.footer > div::after{
+			content: "";
+			display: block;
+            clear: both;
+		}
+		.footer .right > a{
+			font-size: 10px;
+			line-height: 50px;
+		}
+		.footer .right > a:hover{
+			color: #b4a078;
+		}
+		.footer .left{
+			box-sizing: border-box;
+			padding-left: 30px;
+		}
+		.footer .left > i{
+            font-size: 20px;
+			line-height: 50px;
+		}
+		.content .close{
+			width: 30px;
+			height: 30px;
+			position: relative;
+			top: 0px;
+            left: 280px;
+		}
+		.content .close > i{
+			font-size: 26px;
+		}
+		.sub-nav2 .youx{
+			width: 250px;
+			height: 40px;
+            margin: 1em auto;
+            padding : 3px 0;
+			border: 2px solid #ccc;
+			box-sizing: border-box;
+		}
+		.youx input{
+           width: 204px;
+           height: 30px;
+           border: none;
+		}
+		.youx i{
+			padding: .5em;
+			border-right: 1px solid #ccc;
+		}
+		.sub-nav2 .mima2{
+			width: 250px;
+			height: 40px;
+            margin: 2em auto;
+            padding : 3px 0;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+		.mima2 input{
+			width: 204px;
+			height: 30px;
+			line-height: 30px;
+            border: none;
+		}
+		.mima2 i{
+			padding: .5em;
+			border-right: 1px solid #ccc;
+		}
+		.content .denglu  ul > li:nth-child(2):hover+.sub-nav2{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="cotainer">
+		<div class="content">
+		           <div class="close">
+		    	        <i class="iconfont icon-close"></i>
+		            </div>
+			        <div class="denglu">
+				        <ul>
+					        <li>手机号登录</li>
+					        <li>邮箱登录</li>
+				        </ul>
+			        </div>
+			        <div class="sub-nav2">
+			        	<div class="youx">	
+			                <i class="iconfont icon-seeuser"></i>
+			                <input type="text" placeholder="邮箱账号">
+				        </div>
+			        	<div class="mima2">
+			        		<i class="iconfont icon-mima"></i>
+			                <input type="text" placeholder="请输入密码">
+			        	</div>
+			        </div>
+			        <div class="dlu">
+				        <p>登录</p>
+			        </div>
+			        <div class="footer">
+				        <div class="left">
+				            <i class="iconfont icon-wei-xin" style="font-size:24px;></i>
+					        <i class="iconfont icon-qq"></i>
+					        <i class="iconfont icon-weibo" style="font-size:26px;"></i>
+					        <i class="iconfont icon-yi"></i>
+				        </div>
+				        <div class="right">
+					        <a href="#">手机快捷注册</a>
+					        <a href="#">遇到问题？</a>
+				        </div>
+			        </div>
+	    </div>
+	</div>
+</body>
+</html>
+		   

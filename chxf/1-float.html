@@ -1,0 +1,2749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/iconfont/iconfont.css">
+	<link rel="stylesheet" href="./css/iconfont1/iconfont.css">
+	<style>
+	    .wrap {
+        	width: 1090px;
+        	margin: 0 auto;
+        }
+		.header{
+          width: 1090px;
+          margin: 0 auto;
+        }
+        .header .title{
+            height: 150px;
+        }
+        .row{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .row{
+            height: 40px;
+        	background-color: #333333;
+        	/*position: relative;*/
+        }
+        .row > p{
+        	width: 300px;
+        	position: relative;
+        	top: 10px;
+            left: 100px;
+        	color: #cccccc;
+        }
+        .row > p:nth-child(1){
+            left: 100px;
+        }
+        .row > p:nth-child(2){
+            left: 300px;
+            top: -9px;
+            text-decoration: underline;
+        }
+        .row > p:hover{
+        	color: #ffffff;
+        }
+        .row > ul{
+            float: right;
+        }
+        .row::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .row >ul >li{
+            float: left;
+            text-align: center;
+            border-right: 1px solid #cccccc;
+            position: relative;
+            top: -30px;
+            left: -130px;
+        }
+        .row > ul > li > a{
+        	color: #cccccc;
+        }
+        .row >ul >li >a:hover{
+        	color: #ffffff;
+        }
+        .row >ul >li:nth-child(1),
+        .row >ul >li:nth-child(2),
+        .row >ul >li:nth-child(4),
+        .row >ul >li:nth-child(8){
+        	width: 50px;
+
+        }
+        .row >ul >li:nth-child(3),
+        .row >ul >li:nth-child(5),
+        .row >ul >li:nth-child(6),
+        .row >ul >li:nth-child(7){
+            width: 80px;
+        }
+        .row > ul::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .row >ul > li:hover .tip1,
+        .row >ul > li:hover .tip2{
+        	display: block;
+        }
+        .row .tip1{
+        	width: 90px;
+        	height: 172px;
+        	background-color: #fff;
+        	position: absolute;
+        	top: 150%;
+        	left: -10px;
+            display: none;
+            border: 0.5px solid #ccc;
+            box-shadow: 2px 2px 2px #ccc;
+        }
+        .tip1 > ul >li{
+            width: 80px;
+            height: 38px;
+            margin: 0 auto;
+            line-height: 3em;
+            color: #ccc;
+            border-bottom: 1px solid #ccc;
+            z-index: 1;
+        }
+        .row .tip2{
+        	width: 150px;
+        	height: 155px;
+        	background-color: #fff;
+        	position: absolute;
+        	top: 150%;
+        	right: -45px;
+            display: none;
+             border: 0.5px solid #ccc;
+            box-shadow: 2px 2px 2px #999;
+            z-index: 1;
+        }
+        .row .tip2 > p{
+        	color: #333
+        }
+        .header .title > img{
+        	position: absolute;
+        	left: 50%;
+            margin-left: -100px;
+            top: 80px;
+        }
+        .title .lists{
+           width: 260px;
+           height: 30px;
+           border:none;
+           border-bottom: 1px solid #b4a078;
+           position: relative;
+           top: 70px;
+           left: 800px;
+        }
+      
+        .nav::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+		.nav > li{
+			width: 90px;
+			text-align: center;
+			line-height: 3em;
+			float: left;
+            font-weight: 600;
+		}
+		.nav> li > a::after{
+			content: "";
+			height: 2px;
+			background-color:  #b4a078;
+			width: 2em;
+			margin: 0 auto;
+			position: relative;
+			top:-.5em;
+			display: none;
+		}
+		.nav > li:hover > a{
+			color:  #b4a078;
+		}
+		.nav > li:hover > a::after {
+			display: block;
+		}
+		.nav > li:hover > .sub-nav{
+			display: block;
+		}
+        .sub-nav{
+        	position: absolute;
+        	width: 100%;
+        	background-color:#FFFFFF;
+        	left: 0;
+        	text-align:center;
+        	display: none;
+        }
+        .sub-nav > ul{
+        	width: 1090px;
+        	margin: 0 auto;
+        }
+        .sub-nav > ul >li{
+        	float: left;
+        	width: 100px;
+            font-weight: 600;
+        }
+        .sub-nav > ul::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .banner-1{
+        	background-color: #fee59a;
+        	height: 420px;
+        	overflow: hidden;
+        	animation: x 15s both infinite alternate linear;
+        }
+        @keyframes x{
+        	0%{
+        		background-image: url(./images/24.jpg);
+        	}
+        	20%{
+        		background-image: url(./images/25.jpg);
+        	}
+        	40%{
+        		background-image: url(./images/26.jpg);
+        	}
+        	60%{
+        		background-image: url(./images/27.jpg);
+        	}
+        	80%{
+        		background-image: url(./images/28.jpg);
+        	}
+        	100%{
+        		background-image: url(./images/29.jpg);
+        	}
+        }
+        .products{
+        	width: 1090px;
+        	margin: 1em auto;
+        	position: relative;
+        }
+        .products > ul > li{
+        	width: 320px;
+        	height: 360px;
+        	float: left;
+        	margin-right: 10px;
+        }
+        .products > ul::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .products .biaoti{
+        	width: 200px;
+        	height: 30px;
+        	float: left;
+            position: absolute;
+            left: 150px;
+            top: 10px;
+        }
+        .products .biaoti::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .products >h1:hover{
+        	color: #b4a078;
+        	cursor: pointer;
+        }
+        .products > ul > li:first-child{
+        	background-color:#f5efec; 
+        }
+        .products > ul > li:nth-child(2){
+        	background-color:#f3fafb; 
+        }
+        .products > ul > li:nth-child(3){
+        	width: 320px;
+        	height: 175px;
+        	margin-right: 0px;
+        	margin-bottom: 10px;
+        	background-color:#e6f0ec; 
+        }
+        .products > ul > li:nth-child(4){
+        	width: 320px;
+        	height: 175px;
+        	margin-right: 0px;
+        	background-color:#f2fafc; 
+        }
+        .products ul > li > img{
+        	transition: transform 1s;
+        }
+        .products > ul > li > img:hover {
+			transform: scale(1.1);
+		}
+		.products2{
+        	margin: 2em auto;
+        }
+		 .products2 .wrap {
+        	width: 1090px;
+        	margin: 0 auto;
+        	background-color: #fff;
+        }
+		.products2 .wrap > ul > li{
+			width: 265px;
+			height: 380px;
+			float: left;
+			margin-right: 10px;
+			background-color: pink;
+		}
+		.products2 .wrap > ul::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.products2 .wrap > ul > li:nth-child(4){
+			margin-right: 0;
+		}
+		.products2 .wrap > ul > li:nth-child(1){
+            background: url(./images/58.png) 0 0 no-repeat;
+		}
+		.products2 .wrap > ul > li:nth-child(1):hover{
+            background: url(./images/37.jpg) 0 0 no-repeat;
+		}
+		.products2 .wrap > ul > li:nth-child(2){
+            background: url(./images/94.png) 0 0 no-repeat;
+		}
+		.products2 .wrap > ul > li:nth-child(2):hover{
+            background: url(./images/36.jpg) 0 0 no-repeat;
+		}
+		.products2 .wrap > ul > li:nth-child(3){
+            background: url(./images/95.png) 0 0 no-repeat;
+		}
+		.products2 .wrap > ul > li:nth-child(3):hover{
+            background: url(./images/35.jpg) 0 0 no-repeat;
+		}
+		.products2 .wrap > ul > li:nth-child(4){
+            background: url(./images/96.png) 0 0 no-repeat;
+		}
+		.products2 .wrap > ul > li:nth-child(4):hover{
+            background: url(./images/97.jpg) 0 0 no-repeat;
+		}
+		.products2 .wrap > ul > li >p{
+			margin-top: 300px;
+			text-align: center;
+            line-height: 25px;
+			font-weight: 700;
+		}
+	    .products2 .wrap > ul > li >p:hover{
+			cursor: pointer;
+			color: #b4a078;
+		}
+		.products2 .wrap > ul > li >span{
+			margin-left: 110px;
+            color: red;
+		}
+		.products3{
+        	margin: 1em 0;
+        	padding-bottom: 40px;
+            background-color: #f4f0ea;
+        }
+        .products3 .renqi-title *{
+        	height: 40px;
+        	line-height: 40px;
+        }
+        .products3 .renqi-title > h1{
+        	float: left;
+        }
+        .products3 .renqi-title > span{
+        	float: left;
+        	margin-left: 1em;
+        }
+        .products3 .renqi-title p{
+          text-align: right;
+        }
+        .renqi-title .rqtl-rt:last-child{
+        	text-align: right;
+        }
+        .products3 .wrap::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        
+        .products3 .wrap ul > li:nth-child(1) > img{
+        	position: relative;
+        	left: 40px;
+        	top: 40px;
+        	transition: transform 1s;
+        }
+        .products3 .wrap ul > li:first-child~* > img{
+        	position: relative;
+        	left: 20px;
+        	top: 0;
+        	transition: transform 1s;
+        }
+        .products3 .wrap img:hover{
+        	transform: scale(1.1);
+        }
+        .products3  ul > li{
+        	float: left;
+        	background-color: #fff;
+        	margin-right: 10px;
+        }
+        .products3 ul::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .products3 ul > li:nth-child(2),
+		.products3 ul > li:nth-child(3),
+		.products3 ul > li:nth-child(4) {
+			margin-bottom: 10px;
+		}
+		.products3 ul > li:nth-child(4),
+		.products3 ul > li:nth-child(7) {
+			margin-right: 0px;
+		}
+        .products3  ul > li:first-child{
+             width: 400px;
+             height: 530px;
+        }
+         .products3  ul > li:first-child ~ li{
+             width: 220px;
+             height: 260px;
+        }
+        .products3 .renqi-img{
+        	box-sizing: border-box;
+        	height: 180px;
+        	padding: 0 20px;
+        }
+        .products3 .reqi-wenzi{
+        	height: 80px;
+        	border-top: 1px solid #ccc;
+        }
+        .products3 .renqi-img1{
+        	box-sizing: border-box;
+        	height: 400px;
+        	padding: 20px 40px;
+        }
+        .products3 .reqi-wenzi1{
+        	height: 130px;
+        	border-top: 1px solid #ccc;
+        }
+        .products3 .reqi-wenzi1 >p{
+        	text-align: center;
+        	margin-top: 30px;
+        }
+        .products3 .reqi-wenzi > p{
+            text-align: center;
+            margin-top: 1em;
+        }
+        .products4{
+        	margin: 2em auto;
+        }
+        .products4 .xsg-content > li{
+        	float:left;
+        }
+        .products4 .xsg-content::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .products4 .xsg-content > li:nth-child(1){
+        	box-sizing: border-box;
+        	background-color: #f6e5d3;
+        	width: 220px;
+        	height: 380px;
+        }
+        .products4 .xsg-content > li:first-child~*{
+        	box-sizing: border-box;
+        	width: 433px;
+        	height: 188px;
+        	background-color: white;
+        	border: 1px solid #f0ece4;
+        }
+        .products4 .xsg-title *{
+            height: 40px;
+        	line-height: 40px;
+        }
+        .products4 .xsg-title:hover *{
+        	color: #b4a078;
+        	cursor: pointer;
+        }
+        .products4 .xsg-title > h1{
+        	float: left;
+        }
+        .products4 .xsg-title > p{
+        	text-align: right;
+        }
+        .products4 .xsg-title > h3:hover{
+        	color: #b4a078;
+        	cursor: pointer;
+        }
+        .xsg-content .picture{
+        	width: 180px;
+        	height: 100%;
+        	float: left;
+        }
+        .xsg-content .info{
+        	box-sizing: border-box;
+            width: 251px;
+            margin-left: 180px;
+            padding: 2em;
+            background-color: #ffffff;
+        }
+        .xsg-content .info > p{
+        	font-size: 14px;
+        	margin-top: 5px;
+        	color: #cccccc;
+        }
+        .xsg-content .info .bar{
+        	height: 30px;
+        }
+        .xsg-content .info .bar >li{
+            float: left;
+        	height: 20px;
+        	margin: 0 auto;
+        	margin-top: 10px;
+        }
+        .xsg-content .info .bar::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        
+        .xsg-content .info .bar >li:nth-child(1){
+        	width: 150px;
+            height: 15px;
+        }
+        .xsg-content .info .bar >li:nth-child(2){
+        	width: 40px;
+        	height: 10px;
+        	line-height: 10px;
+        	text-align: center;
+
+        }
+        .progress{
+        	width: 100%;
+        	border-radius: 0.5em;
+        	border: 1px solid #f2cecd;
+        	overflow: hidden;
+        }
+        .progress .progress-bar{
+        	width: 60%;
+        	height: 10px;
+        	background-color: #ffe5e5;
+        }
+        .info .qg {
+        	width: 100px;
+        	height: 30px;
+        	background-color: #be4141;
+        }
+        .info .qg > p{
+        	font-size: 16px;
+        	color: #ffffff;
+        	line-height: 30px;
+        	text-align: center;
+        }
+        .xsg-content .info .price{
+        	height: 20px;
+        	line-height: 20px;
+        }
+        .xsg-content .info .price > li{
+        	float: left;
+        	width: 90px;
+        	height: 20px;
+        	line-height: 10px;
+        }
+        .xsg-content .info .price::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .info .price >li:first-child >p{
+             font-size: 14px;
+             color: #be4141;
+        }
+        .info .price >li:last-child >p{
+        	font-size: 14px;
+             color: #b4a078;
+        }
+        .products6{
+        	margin:3em auto;
+        }
+        .products6 .jiaju-pictire > li{
+        	float: left;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        .products6 .jiaju-pictire::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .products6 .jiaju-pictire > li:nth-child(1){
+        	background-color: #fdf6ec;
+        	width: 1090px;
+        	height: 310px;
+        }
+        .products6 .jiaju-pictire > li:nth-child(5){
+        	margin-right: 0px;
+        }
+        .products6 .jiaju-pictire > li:nth-child(1)~*{
+        	background-color: #f4f4f4;
+        	width: 265px;
+        	height: 270px;
+        }
+        .products6 .jiaju-title > h1:hover{
+            color: #b4a078;
+        	cursor: pointer;
+        }
+        .products6 .jiaju-pictire > li:first-child~* > img{
+        	transition: transform 1s;
+        }
+        .products6 .jiaju-pictire > li:first-child~* > img:hover{
+        	transform: scale(1.1);
+        }
+        .products6 .jiaju-title .jiaju > li{
+        	float: left;
+        	height: 20px;
+        	line-height: 20px;
+        	text-align: center;
+        }
+        /*.products6 .jiaju-title .jiaju > li:hover{
+            cursor: pointer;
+            color:  #b4a078;
+        }*/
+        .products6 .jiaju-title .jiaju{
+        	margin-left: 580px;
+        }
+        .products6 .jiaju-title .jiaju::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+         .products6 .jiaju-title > h1{
+         	float: left;
+         	height: 20px;
+         	line-height: 20px;
+         }
+         .products6 .jiaju-word .jiaju-price >li{
+         	float: left;
+         	width: 265px;
+         	height: 50px;
+         	margin-right: 10px;
+         	background-color: #ffffff;
+         }
+         .jiaju-word .jiaju-price::after{
+         	content: "";
+         	display: block;;
+         	clear: both;
+         }
+         .jiaju-word .jiaju-price > li:last-child{
+         	margin-right: 0px;
+         }
+         .jiaju-word .jiaju-price >li> p{
+         	text-align: center;
+         	line-height: 30px;
+         }
+         .jiaju-word .jiaju-price >li> p:hover{
+         	cursor: pointer;
+         	color:  #b4a078;
+         }
+        .products7{
+        	margin:3em auto;
+        	
+        }
+        .products7 .xiebao-pictire > li{
+        	float: left;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        .products7 .xiebao-pictire::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .products7 .xiebao-pictire > li:nth-child(1){
+        	background-color: #fdf6ec;
+        	width: 1090px;
+        	height: 310px;
+        }
+        .products7 .xiebao-pictire > li:nth-child(5){
+        	margin-right: 0px;
+        }
+        .products7 .xiebao-pictire > li:nth-child(1)~*{
+        	background-color: #f4f4f4;
+        	width: 265px;
+        	height: 270px;
+        }
+        .products7 .xiebao-title > h1:hover{
+            color: #b4a078;
+        	cursor: pointer;
+        }
+        .products7 .xiebao-pictire > li:first-child~* > img{
+        	transition: transform 1s;
+        }
+        .products7 .xiebao-pictire > li:first-child~* > img:hover{
+        	transform: scale(1.1);
+        }
+        .products7 .xiebao-title .xiebao > li{
+        	float: left;
+        	height: 20px;
+        	line-height: 20px;
+        	text-align: center;
+        }
+        .products7 .xiebao-title .xiebao{
+        	margin-left: 560px;
+        }
+        .products7 .xiebao-title .xiebao::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+         .products7 .xiebao-title > h1{
+         	float: left;
+         	height: 20px;
+         	line-height: 20px;
+         }
+         .products7 .xiebao-word .xiebao-price >li{
+         	float: left;
+         	width: 265px;
+         	height: 50px;
+         	margin-right: 10px;
+         	background-color: #ffffff;
+         }
+         .xiebao-word .-xiebao::after{
+         	content: "";
+         	display: block;;
+         	clear: both;
+         }
+         .xiebao-word .xiebao-price > li:last-child{
+         	margin-right: 0px;
+         }
+         .xiebao-word .xiebao-price >li> p{
+         	text-align: center;
+         	line-height: 30px;
+            font-weight: 600;
+         }
+          .xiebao-word .xiebao-price >li> p:hover{
+         	cursor: pointer;
+         	color:  #b4a078;
+         }
+         .products8{
+        	margin:0 auto;
+        	margin-top: 100px;
+        }
+        .products8 .fuzhuang-pictire > li{
+        	float: left;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        .products8 .fuzhuang-pictire::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .products8 .fuzhuang-pictire > li:nth-child(1){
+        	background-color: #fdf6ec;
+        	width: 1090px;
+        	height: 310px;
+        }
+        .products8 .fuzhuang-pictire > li:nth-child(5){
+        	margin-right: 0px;
+        }
+        .products8 .fuzhuang-pictire > li:nth-child(1)~*{
+        	background-color: #f4f4f4;
+        	width: 265px;
+        	height: 270px;
+        }
+        .products8 .fuzhuang-title > h1:hover{
+            color: #b4a078;
+        	cursor: pointer;
+        }
+        .products8 .fuzhuang-pictire > li:first-child~* > img{
+        	transition: transform 1s;
+        }
+        .products8 .fuzhuang-pictire > li:first-child~* > img:hover{
+        	transform: scale(1.1);
+        }
+        .products8 .fuzhuang-title .fuzhuang > li{
+        	float: left;
+        	height: 20px;
+        	line-height: 20px;
+        	text-align: center;
+        }
+        .products8 .fuzhuang-title .fuzhuang{
+        	margin-left: 550px;
+        }
+        .products8 .fuzhuang-title .fuzhuang::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+         .products8 .fuzhuang-title > h1{
+         	float: left;
+         	height: 20px;
+         	line-height: 20px;
+         }
+         .products8 .fuzhuang-word .fuzhuang-price >li{
+         	float: left;
+         	width: 265px;
+         	height: 50px;
+         	margin-right: 10px;
+         	background-color: #ffffff;
+         }
+         .fuzhuang-word .fuzhuang-price::after{
+         	content: "";
+         	display: block;;
+         	clear: both;
+         }
+         .fuzhuang-word .fuzhuang-price > li:last-child{
+         	margin-right: 0px;
+         }
+         .fuzhuang-word .fuzhuang-price >li> p{
+         	text-align: center;
+         	line-height: 30px;
+         }
+         .fuzhuang-word .fuzhuang-price >li> p:hover{
+         	cursor: pointer;
+         	color:  #b4a078;
+         }
+        .products9{
+        	margin:3em auto;
+        }
+        .products9 .dianqi-pictire > li{
+        	float: left;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        .products9 .dianqi-pictire::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .products9 .dianqi-pictire > li:nth-child(1){
+        	background-color: #fdf6ec;
+        	width: 1090px;
+        	height: 310px;
+        }
+        .products9 .dianqi-pictire > li:nth-child(5){
+        	margin-right: 0px;
+        }
+        .products9 .dianqi-pictire > li:nth-child(1)~*{
+        	background-color: #f4f4f4;
+        	width: 265px;
+        	height: 270px;
+        }
+        .products9 .dianqi-title > h1:hover{
+            color: #b4a078;
+        	cursor: pointer;
+        }
+        .products9 .dianqi-pictire > li:first-child~* > img{
+        	transition: transform 1s;
+        }
+        .products9 .dianqi-pictire > li:first-child~* > img:hover{
+        	transform: scale(1.1);
+        }
+        .products9 .dianqi-title .dianqi > li{
+        	float: left;
+        	height: 20px;
+        	line-height: 20px;
+        	text-align: center;
+        }
+        .products9 .dianqi-title .dianqi{
+        	margin-left: 620px;
+        }
+        .products9 .dianqi-title .dianqi::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+         .products9 .dianqi-title > h1{
+         	float: left;
+         	height: 20px;
+         	line-height: 20px;
+         }
+         .products9 .dianqi-word .dianqi-price >li{
+         	float: left;
+         	width: 265px;
+         	height: 50px;
+         	margin-right: 10px;
+         	background-color: #ffffff;
+         }
+         .dianqi-word .dianqi-price::after{
+         	content: "";
+         	display: block;;
+         	clear: both;
+         }
+         .dianqi-word .dianqi-price > li:last-child{
+         	margin-right: 0px;
+         }
+         .dianqi-word .dianqi-price >li> p{
+         	text-align: center;
+         	line-height: 30px;
+         }
+         .dianqi-word .dianqi-price >li> p:hover{
+         	cursor: pointer;
+         	color:  #b4a078;
+         }
+        .products10{
+        	margin:3em auto;
+        }
+        .products10 .xihu-pictire > li{
+        	float: left;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        .products10 .xihu-pictire::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .products10 .xihu-pictire > li:nth-child(1){
+        	background-color: #fdf6ec;
+        	width: 1090px;
+        	height: 310px;
+        }
+        .products10 .xihu-pictire > li:nth-child(5){
+        	margin-right: 0px;
+        }
+        .products10 .xihu-pictire > li:nth-child(1)~*{
+        	background-color: #f4f4f4;
+        	width: 265px;
+        	height: 270px;
+        }
+        .products10 .xihu-title > h1:hover{
+            color: #b4a078;
+        	cursor: pointer;
+        }
+        .products10 .xihu-pictire > li:first-child~* > img{
+        	transition: transform 1s;
+        }
+        .products10 .xihu-pictire > li:first-child~* > img:hover{
+        	transform: scale(1.1);
+        }
+        .products10 .xihu-title .xihu > li{
+        	float: left;
+        	height: 20px;
+        	line-height: 20px;
+        	text-align: center;
+        }
+        .products10 .xihu-title .xihu{
+        	margin-left: 530px;
+        }
+        .products10 .xihu-title .xihu::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+         .products10 .xihu-title > h1{
+         	float: left;
+         	height: 20px;
+         	line-height: 20px;
+         }
+         .products10 .xihu-word .xihu-price >li{
+         	float: left;
+         	width: 265px;
+         	height: 50px;
+         	margin-right: 10px;
+         	background-color: #ffffff;
+         }
+         .xihu-word .xihu-price::after{
+         	content: "";
+         	display: block;;
+         	clear: both;
+         }
+         .xihu-word .xihu-price > li:last-child{
+         	margin-right: 0px;
+         }
+         .xihu-word .xihu-price >li> p{
+         	text-align: center;
+         	line-height: 30px;
+         }
+         .xihu-word .xihu-price >li> p:hover{
+         	cursor: pointer;
+         	color:  #b4a078;
+         }
+         .products11{
+        	margin:3em auto;
+        }
+        .products11 .yinshi-pictire > li{
+        	float: left;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        .products11 .yinshi-pictire::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .products11 .yinshi-pictire > li:nth-child(1){
+        	background-color: #fdf6ec;
+        	width: 1090px;
+        	height: 310px;
+        }
+        .products11 .yinshi-pictire > li:nth-child(5){
+        	margin-right: 0px;
+        }
+        .products11 .yinshi-pictire > li:nth-child(1)~*{
+        	background-color: #f4f4f4;
+        	width: 265px;
+        	height: 270px;
+        }
+        .products11 .yinshi-title > h1:hover{
+            color: #b4a078;
+        	cursor: pointer;
+        }
+        .products11 .yinshi-pictire > li:first-child~* > img{
+        	transition: transform 1s;
+        }
+        .products11 .yinshi-pictire > li:first-child~* > img:hover{
+        	transform: scale(1.1);
+        }
+        .products11 .yinshi-title .yinshi > li{
+        	float: left;
+            height: 20px;
+        	line-height: 20px;
+        	text-align: center;
+        }
+        .products11 .yinshi-title .yinshi{
+        	margin-left: 550px;
+        }
+        .products11 .yinshi-title .yinshi::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+         .products11 .yinshi-title > h1{
+         	float: left;
+         	height: 20px;
+         	line-height: 20px;
+         }
+         .products11 .yinshi-word .yinshi-price >li{
+         	float: left;
+         	width: 265px;
+         	height: 50px;
+         	margin-right: 10px;
+         	background-color: #ffffff;
+         }
+         .yinshi-word .yinshi-price::after{
+         	content: "";
+         	display: block;;
+         	clear: both;
+         }
+         .yinshi-word .yinshi-price > li:last-child{
+         	margin-right: 0px;
+         }
+          .yinshi-word .yinshi-price >li> p{
+         	text-align: center;
+         	line-height: 30px;
+         }
+          .yinshi-word .yinshi-price >li> p:hover{
+         	cursor: pointer;
+         	color:  #b4a078;
+         }
+         .products12{
+        	margin:3em auto;
+        }
+        .products12 .canchu-pictire > li{
+        	float: left;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        .products12 .canchu-pictire::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .products12 .canchu-pictire > li:nth-child(1){
+        	background-color: #fdf6ec;
+        	width: 1090px;
+        	height: 310px;
+        }
+        .products12 .canchu-pictire > li:nth-child(5){
+        	margin-right: 0px;
+        }
+        .products12 .canchu-pictire > li:nth-child(1)~*{
+        	background-color: #f4f4f4;
+        	width: 265px;
+        	height: 270px;
+        }
+        .products12 .canchu-title > h1:hover{
+            color: #b4a078;
+        	cursor: pointer;
+        }
+        .products12 .canchu-pictire > li:first-child~* > img{
+        	transition: transform 1s;
+        }
+        .products12 .canchu-pictire > li:first-child~* > img:hover{
+        	transform: scale(1.1);
+        }
+        .products12 .canchu-title .canchu > li{
+        	float: left;
+        	height: 20px;
+        	line-height: 20px;
+        	text-align: center;
+        }
+        .products12 .canchu-title .canchu{
+        	margin-left: 500px;
+        }
+        .products12 .canchu-title .canchu::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+         .products12 .canchu-title > h1{
+         	float: left;
+         	height: 20px;
+         	line-height: 20px;
+         }
+         .products12 .canchu-word .canchu-price >li{
+         	float: left;
+         	width: 265px;
+         	height: 50px;
+         	margin-right: 10px;
+         	background-color: #ffffff;
+         }
+         .canchu-word .canchu-price::after{
+         	content: "";
+         	display: block;;
+         	clear: both;
+         }
+         .canchu-word .canchu-price > li:last-child{
+         	margin-right: 0px;
+         }
+         .canchu-word .canchu-price >li> p{
+         	text-align: center;
+         	line-height: 30px;
+         }
+         .canchu-word .canchu-price >li> p:hover{
+         	cursor: pointer;
+         	color:  #b4a078;
+         }
+         .products13{
+        	margin:3em auto;
+        }
+        .products13 .yingtong-pictire > li{
+        	float: left;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        .products13 .yingtong-pictire::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .products13 .yingtong-pictire > li:nth-child(1){
+        	background-color: #fdf6ec;
+        	width: 1090px;
+        	height: 310px;
+        }
+        .products13 .yingtong-pictire > li:nth-child(5){
+        	margin-right: 0px;
+        }
+        .products13 .yingtong-pictire > li:nth-child(1)~*{
+        	background-color: #f4f4f4;
+        	width: 265px;
+        	height: 270px;
+        }
+        .products13 .yingtong-title > h1:hover{
+            color: #b4a078;
+        	cursor: pointer;
+        }
+        .products13 .yingtong-pictire > li:first-child~* > img{
+        	transition: transform 1s;
+        }
+        .products13 .yingtong-pictire > li:first-child~* > img:hover{
+        	transform: scale(1.1);
+        }
+        .products13 .yingtong-title .yingtong > li{
+        	float: left;
+        	height: 25px;
+        	line-height: 25px;
+        	text-align: center;
+        }
+        .products13 .yingtong-title .yingtong{
+        	margin-left: 410px;
+        }
+        .products13 .yingtong-title .yingtong::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+         .products13 .yingtong-title > h1{
+         	float: left;
+         	height: 25px;
+         	line-height: 25px;
+         }
+         .products13 .yingtong-word .yingtong-price >li{
+         	float: left;
+         	width: 265px;
+         	height: 50px;
+         	margin-right: 10px;
+         	background-color: #ffffff;
+         }
+         .yingtong-word .yingtong-price::after{
+         	content: "";
+         	display: block;;
+         	clear: both;
+         }
+         .yingtong-word .yingtong-price > li:last-child{
+         	margin-right: 0px;
+         }
+         .yingtong-word .yingtong-price >li> p{
+         	text-align: center;
+         	line-height: 30px;
+         }
+          .yingtong-word .yingtong-price >li> p:hover{
+         	cursor: pointer;
+         	color:  #b4a078;
+         }
+         .products14{
+        	margin:3em auto;
+        }
+        .products14 .wenti-pictire > li{
+        	float: left;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        .products14 .wenti-pictire::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .products14 .wenti-pictire > li:nth-child(1){
+        	background-color: #fdf6ec;
+        	width: 1090px;
+        	height: 310px;
+        }
+        .products14 .wenti-pictire > li:nth-child(5){
+        	margin-right: 0px;
+        }
+        .products14 .wenti-pictire > li:nth-child(1)~*{
+        	background-color: #f4f4f4;
+        	width: 265px;
+        	height: 270px;
+        }
+        .products14 .wenti-title > h1:hover{
+            color: #b4a078;
+        	cursor: pointer;
+        }
+        .products14 .wenti-pictire > li:first-child~* > img{
+        	transition: transform 1s;
+        }
+        .products14 .wenti-pictire > li:first-child~* > img:hover{
+        	transform: scale(1.1);
+        }
+        .products14 .wenti-title .wenti > li{
+        	float: left;
+        	height: 25px;
+        	line-height: 25px;
+        	text-align: center;
+        }
+        .products14 .wenti-title .wenti{
+        	margin-left: 510px;
+        }
+        .products14 .wenti-title .wenti::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+         .products14 .wenti-title > h1{
+         	float: left;
+         	height: 25px;
+         	line-height: 25px;
+         }
+         .products14 .wenti-word .wenti-price >li{
+         	float: left;
+         	width: 265px;
+         	height: 50px;
+         	margin-right: 10px;
+         	background-color: #ffffff;
+         }
+         .wenti-word .wenti-price::after{
+         	content: "";
+         	display: block;;
+         	clear: both;
+         }
+         .wenti-word .wenti-price > li:last-child{
+         	margin-right: 0px;
+         }
+         .wenti-word .wenti-price >li> p{
+         	text-align: center;
+         	line-height: 30px;
+         }
+          .wenti-word .wenti-price >li> p:hover{
+         	cursor: pointer;
+         	color:  #b4a078;
+         }
+         .products15{
+        	margin:3em auto;
+        }
+        .products15 .tese-pictire > li{
+        	float: left;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        .products15 .tese-pictire::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .products15.tese-pictire > li:nth-child(1){
+        	background-color: #fdf6ec;
+        	width: 1090px;
+        	height: 310px;
+        }
+        .products15 .tese-pictire > li:nth-child(5){
+        	margin-right: 0px;
+        }
+        .products15 .tese-pictire > li:nth-child(1)~*{
+        	background-color: #f4f4f4;
+        	width: 265px;
+        	height: 270px;
+        }
+        .products15 .tese-title > h1:hover{
+            color: #b4a078;
+        	cursor: pointer;
+        }
+        .products15 .tese-pictire > li:first-child~* > img{
+        	transition: transform 1s;
+        }
+        .products15 .tese-pictire > li:first-child~* > img:hover{
+        	transform: scale(1.1);
+        }
+        .products15 .tese-title .tese > li{
+        	float: left;
+        	height: 25px;
+        	line-height: 25px;
+        	text-align: center;
+        }
+        .products15 .tese-title .tese{
+        	margin-left: 520px;
+        }
+        .products15 .tese-title .tese::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+         .products15 .tese-title > h1{
+         	float: left;
+         	height: 25px;
+         	line-height: 25px;
+         }
+         .products15 .tese-word .tese-price >li{
+         	float: left;
+         	width: 265px;
+         	height: 50px;
+         	margin-right: 10px;
+         	background-color: #ffffff;
+         }
+         .tese-word .tese-price::after{
+         	content: "";
+         	display: block;;
+         	clear: both;
+         }
+         .tese-word .tese-price > li:last-child{
+         	margin-right: 0px;
+         }
+         .tese-word .tese-price >li> p{
+         	text-align: center;
+         	line-height: 30px;
+         }
+         .tese-word .tese-price >li> p:hover{
+         	cursor: pointer;
+         	color:  #b4a078;
+         }
+        .products16{
+        	margin: 2em auto;
+        }
+       
+        .products16 ul > li{
+        	float:left;
+        }
+        .products16 ul::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .products16 ul > li:nth-child(1){
+        	width: 690px;
+        	height: 380px;
+        	margin-right: 10px;
+        	background-color: #7a7879;
+        }
+        .products16 ul > li:nth-child(2){
+        	width: 390px;
+        	height: 185px;
+        	margin-bottom: 10px;
+        	background-color:#c7b3aa; 
+        }
+        .products16 ul > li:nth-child(3){
+        	width: 390px;
+        	height: 185px;
+        	background-color: #d1bbae;
+        }
+        .aside{
+        	width: 80px;
+        	background-color: #fff;
+        	position: fixed;
+        	right: 0;
+        	top: 200px;
+        }
+        .aside > ul > li{
+            height: 150px;
+            position: relative;
+        }
+        .aside > ul > li:nth-child(2){
+        	height: 210px;
+        }
+        .aside > ul > li:nth-child(3),
+        .aside > ul > li:nth-child(4){
+        	height: 73px;
+        }
+        
+        .icon-search{
+        	font-size: 25px;
+        	color: #b4a078;
+        	position: relative;
+        	top: 40px;
+        	left: 1050px;
+        }
+        .icon-gouwuche{
+        	font-size: 25px;
+        	color: #b4a078;
+        	position: relative;
+        	top: 40px;
+        	left: 1070px;
+        }
+        .aside .lipin{
+        	width: 80px;
+        	height: 60px;
+        	margin-top: 40px;
+            margin-left: 15px;
+        }
+        .aside .lipin:hover{
+        	color: #b4a078;
+        	cursor: pointer;
+        }
+        .aside >ul > li:nth-child(2) > a{
+            margin-left: 15px;
+        }
+        .icon-lipin{
+        	font-size: 30px;
+        }
+        .yanxuan{
+        	width: 80px;
+        	text-align: center;
+        	border-top: 1px solid #ccc;
+        }
+        .icon-dingyue{
+        	font-size: 35px;
+        }
+        .aside .yanxuan:hover{
+        	color: #b4a078;
+        }
+        .icon-kefu{
+        	font-size: 35px;
+        }
+        .footer .top{
+        	height: 300px;
+        	background-color: #ffffff;
+        }
+        .footer .bottom{
+            height: 195px;
+            background-color: #414141;
+        }
+        .top-content{
+            width:1090px;
+            margin: 0 auto;
+
+        }        
+        .top-content > ul > li{
+        	box-sizing: border-box;
+        	float: left;
+        	width: 362px;
+            height: 200px;
+            background-color: #ffffff;
+            margin: 3em auto;
+            padding: 0 20px;
+            text-align: center;
+            
+        }
+        .top-content > ul::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .footer .top-content >ul > li:nth-child(1),
+        .footer .top-content >ul > li:nth-child(2){
+            border-right: 1px solid #e9e9e9;
+        }
+        .top-content > ul > li >h3{
+        	line-height: 3em;
+        }
+        .top-content > ul > li >p{
+        	line-height: 2em;
+        }
+        .one{
+        	box-sizing: border-box;
+        	width: 1090px;
+        	height: 120px;
+        	border-bottom: 1px solid #4f4f4f;
+        	margin: 0 auto;
+            padding: 3em 4em;
+        }
+        .two{
+        	width: 1090px;
+        	height: 60px;
+        	margin:1em auto;
+        	background-color:#414141;
+            color: #999075;
+        }
+        .bottom .links > li >a{
+        	float: left;
+        	width: 100px;
+        	height: 20px;
+        	color: #999075;
+        	text-align: center;
+        	border-right: 1px solid #999075;
+        	
+        }
+        .bottom .links::after{
+        	content: "";
+        	display: block;
+        	clear: both;
+        }
+        .bottom .one > ul >li{
+        	width: 300px;
+        	height: 40px;
+        	float: left;
+        	text-align: center;
+  
+        }
+        .bottom .one >ul::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .bottom .one ul > li >p{
+        	width: 150px;
+        	height: 40px;
+        	line-height: 40px;
+        	font-size: 16px;
+        	color: #ffffff;
+        	margin-left: 60px;
+        	text-align:left;
+        }
+        .yonghu >i{
+            font-size: 35px;
+        }
+       .guanzhu *{
+             display: inline;
+       }
+        .guanzhu >i{
+        	font-size: 26px;
+        }
+        .circle{
+         	float: left;
+        	width: 40px;
+        	height:40px;
+        	border-radius: 50%;
+        	border: 1px solid #ffffff;
+        }
+        .circle > i{
+        	font-size: 30px;
+        	color: #ffffff;
+        }
+        .top-content .serve{
+        	width: 240px;
+        	height: 100px;
+        	margin: 0 auto;
+        	background-color: #ffffff;
+        }
+        .top-content .serve >li{
+        	box-sizing: border-box;
+        	float: left;
+        	width: 90px;
+        	height: 100px;
+        	padding: 1em 1em;
+        	border: 1px solid #ccc;
+        	margin: 1em 1em;
+        }
+        .top-content .serve::after{
+        	content: "";
+        	display: block;
+            clear: both;
+        }
+        .top-content .guanzhu{
+        	height: 40px;
+        	line-height: 40px;
+        	text-align: left;
+        	margin-top: 20px;
+        	background-color: #ffffff;
+        }
+
+	</style>
+</head>
+<body>
+	<div class="container">
+	  <dic class="wrap">
+	    <div class="row">
+	    	<p>好的生活，没那么贵</p>
+	    	<p>[严选X中行联名卡]达标领80元礼品卡></p>
+	    	<!-- <p>[福利] 下载严选APP,抢1元包邮团</p> -->
+	    	<ul>
+	    		<li><a href="">登录</a></li>
+	    		<li><a href="">注册</a></li>
+	    		<li><a href="">我的订单</a></li>
+	    		<li><a href="">会员</a></li>
+	    		<li><a href="">甄选家</a></li>
+	    		<li><a href="">企业采购</a></li>
+	    		
+	    		<li>
+	    		    <a href="">客户服务</a>
+                    <div class="tip1">
+                    	<ul>
+                    		<li><a href="">在线客服</a></li>
+                    		<li><a href="">帮助中心</a></li>
+                    		<li><a href="">商务合作</a></li>
+                    		<li><a href="">平台开放</a></li>
+                    	</ul>
+                    </div>
+	    		</li>
+	    		<li>
+	    		    <a href="">APP</a>
+	    		    <div class="tip2">
+	    		    	<img src="./images/62.png" alt="">
+	    		    	<p>下载领1000元新人礼包</p>
+	    		    </div>
+	    		</li>
+	    	</ul>
+	    </div>
+	  </div>
+		<div class="header">
+		    <div class="title">
+		    	<img src="./images/yx.png" alt="图片找不到了">
+		    	<form action="GET" class="form">
+		    		<input type="text" list="browsers" class="lists" placeholder="甜品鲜花七夕浪漫上新">
+		    		<datalist id="browsers">
+		    			<option value="七夕美食99选9"></option>
+		    			<option value="七夕定制礼物"></option>
+		    			<option value="床品满300减100"></option>
+		    			<option value="爆款电器特价"></option>
+		    			<option value="洗护美妆买4减1"></option>
+		    		</datalist>
+		    	</form>
+		    	<i class="iconfont icon-search" ></i>
+		    	<i class="iconfont icon-gouwuche"></i>
+		    </div>
+			<ul class="nav">
+				<li><a href="#">首页</a></li>
+				<li>
+				   <a href="#">居家</a>
+				   <div class="sub-nav">
+				   	    <ul>
+				   	        <li><img src="./image/1.png" alt=""><br><a href="">夏凉</a></li>
+				   	        <li><img src="./image/2.png" alt=""><br><a href="">床品件套</a></li>
+				   	        <li><img src="./image/3.png" alt=""><br><a href="">被枕</a></li>
+                   	        <li><img src="./image/4.png" alt=""><br><a href="#">家居</a></li>
+                   	        <li><img src="./image/5.png" alt=""><br><a href="#">灯具</a></li>
+                   	        <li><img src="./image/6.png" alt=""><br><a href="#">收纳</a></li>
+                   	        <li><img src="./image/7.png" alt=""><br><a href="">布衣软装</a></li>
+                   	        <li><img src="./image/8.png" alt=""><br><a href="">家饰</a></li>
+                   	        <li><img src="./image/9.png" alt=""><br><a href="">旅行用品</a></li>
+                   	        <li><img src="./image/10.png" alt=""><br><a href="">晾晒除味</a></li>
+                   	        <li><img src="./image/11.png" alt=""><br><a href="">家庭医疗</a></li>
+                   	        <li><img src="./image/12.png" alt=""><br><a href="">宠物</a></li>
+                        </ul>
+				   </div>
+                   
+				</li>
+				<li>
+				    <a href="#">鞋包配饰</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/13.png" alt=""><br><a href="">行李箱</a></li>
+				    	    <li><img src="./image/14.png" alt=""><br><a href="">女士包袋</a></li>
+				    	    <li><img src="./image/15.png" alt=""><br><a href="">男士包袋</a></li>
+				    	    <li><img src="./image/16.png" alt=""><br><a href="">钱包及小皮件</a></li>
+				    	    <li><img src="./image/17.png" alt=""><br><a href="">女鞋</a></li>
+				    	    <li><img src="./image/18.png" alt=""><br><a href="">男鞋</a></li>
+				    	    <li><img src="./image/19.png" alt=""><br><a href="">拖鞋</a></li>
+				    	    <li><img src="./image/20.png" alt=""><br><a href="">鞋配</a></li>
+				    	    <li><img src="./image/21.png" alt=""><br><a href="">袜子</a></li>
+				    	    <li><img src="./image/22.png" alt=""><br><a href="">丝袜</a></li>
+				    	    <li><img src="./image/23.png" alt=""><br><a href="">配饰</a></li>
+				    	    <li><img src="./image/24.png" alt=""><br><a href="">眼镜</a></li>
+				    	    <li><img src="./image/25.png" alt=""><br><a href="">围巾件套</a></li>
+				        </ul>
+				      </div>
+				</li>
+				<li>
+				    <a href="#">服装</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/26.png" alt=""><br><a href="">T恤</a></li>
+				    	    <li><img src="./image/28.png" alt=""><br><a href="">牛仔</a></li>
+				    	    <li><img src="./image/27.png" alt=""><br><a href="">运动</a></li>
+				    	    <li><img src="./image/30.png" alt=""><br><a href="">女士上装</a></li>
+				    	    <li><img src="./image/31.png" alt=""><br><a href="">女士外套</a></li>
+				    	    <li><img src="./image/32.png" alt=""><br><a href="">女士下装</a></li>
+				    	    <li><img src="./image/33.png" alt=""><br><a href="">男士上装</a></li>
+				    	    <li><img src="./image/34.png" alt=""><br><a href="">男士下装</a></li>
+				    	    <li><img src="./image/35.png" alt=""><br><a href="">男士外套</a></li>
+				    	    <li><img src="./image/36.png" alt=""><br><a href="">男士内衣内裤</a></li>
+				    	    <li><img src="./image/37.png" alt=""><br><a href="">女士内衣内裤</a></li>
+				    	    <li><img src="./image/38.png" alt=""><br><a href="">男士家居服</a></li>
+				    	    <li><img src="./image/39.png" alt=""><br><a href="">女士家居服</a></li>
+				        </ul>
+				     </div>    
+				</li>
+				<li>
+				    <a href="#">电器</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/40.png" alt=""><br><a href="">生活电器</a></li>
+				    	    <li><img src="./image/41.png" alt=""><br><a href="">厨房电器</a></li>
+				    	    <li><img src="./image/42.png" alt=""><br><a href="">个人健康</a></li>
+				    	    <li><img src="./image/43.png" alt=""><br><a href="">数码</a></li>
+				    	    <li><img src="./image/44.png" alt=""><br><a href="">影视娱乐</a></li>
+				    	</ul>
+				    	 </div>
+				</li>
+				<li>
+				    <a href="#">洗护</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/45.png" alt=""><br><a href="">纸品湿巾</a></li>
+				    	    <li><img src="./image/46.png" alt=""><br><a href="">家庭清洁</a></li>
+				    	    <li><img src="./image/47.png" alt=""><br><a href="">生理用品</a></li>
+				    	    <li><img src="./image/48.png" alt=""><br><a href="">浴室用具</a></li>
+				    	    <li><img src="./image/49.png" alt=""><br><a href="">毛巾</a></li>
+				    	    <li><img src="./image/50.png" alt=""><br><a href="">美妆</a></li>
+				    	    <li><img src="./image/51.png" alt=""><br><a href="">香氛</a></li>
+				    	    <li><img src="./image/52.png" alt=""><br><a href="">面部口腔护理</a></li>
+				    	    <li><img src="./image/53.png" alt=""><br><a href="">身体护理</a></li>
+				    	    <li><img src="./image/54.png" alt=""><br><a href="">洗发护发</a></li>
+				    	</ul>
+				    	 </div>
+				</li>
+				<li>
+				    <a href="#">饮食</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/55.png" alt=""><br><a href="">甜品鲜花</a></li>
+				    	    <li><img src="./image/56.png" alt=""><br><a href="">糕点</a></li>
+				    	    <li><img src="./image/57.png" alt=""><br><a href="">小食</a></li>
+				    	    <li><img src="./image/58.png" alt=""><br><a href="">坚果炒货</a></li>
+				    	    <li><img src="./image/59.png" alt=""><br><a href="">果干</a></li>
+				    	    <li><img src="./image/60.png" alt=""><br><a href="">肉类零食</a></li>
+				    	    <li><img src="./image/61.png" alt=""><br><a href="">冲饮</a></li>
+				    	    <li><img src="./image/62.png" alt=""><br><a href="">茗茶</a></li>
+				    	    <li><img src="./image/63.png" alt=""><br><a href="">酒水饮料</a></li>
+				    	    <li><img src="./image/64.png" alt=""><br><a href="">方便食品</a></li>
+				    	    <li><img src="./image/65.png" alt=""><br><a href="">食材</a></li>
+				    	    <li><img src="./image/66.png" alt=""><br><a href="">调味</a></li>
+				    	    <li><img src="./image/67.png" alt=""><br><a href="">滋补保健</a></li>
+				    	    <li><img src="./image/68.png" alt=""><br><a href="">生鲜</a></li>
+				        </ul>
+				         </div>
+				</li>
+				<li>
+				    <a href="#">餐厨</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/69.png" alt=""><br><a href="">水具杯壶</a></li>
+				    	    <li><img src="./image/70.png" alt=""><br><a href="">餐具</a></li>
+				    	    <li><img src="./image/71.png" alt=""><br><a href="">锅具</a></li>
+				    	    <li><img src="./image/72.png" alt=""><br><a href="">清洁保鲜</a></li>
+				    	    <li><img src="./image/73.png" alt=""><br><a href="">厨房配件</a></li>
+				    	    <li><img src="./image/74.png" alt=""><br><a href="">刀剪</a></li>
+				    	    <li><img src="./image/75.png" alt=""><br><a href="">茶具咖啡具酒具</a></li>
+				    	</ul>
+				    	 </div>
+				</li>
+				<li>
+				    <a href="#">婴童</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/76.png" alt=""><br><a href="">暑期好物</a></li>
+				    	    <li><img src="./image/77.png" alt=""><br><a href="">新生儿服装</a></li>
+				    	    <li><img src="./image/78.png" alt=""><br><a href="">小童服装</a></li>
+				    	    <li><img src="./image/79.png" alt=""><br><a href="">中大童服装</a></li>
+				    	    <li><img src="./image/80.png" alt=""><br><a href="">内衣配搭</a></li>
+				    	    <li><img src="./image/81.png" alt=""><br><a href="">童鞋童包</a></li>
+				    	    <li><img src="./image/82.png" alt=""><br><a href="">婴童洗护</a></li>
+				    	    <li><img src="./image/83.png" alt=""><br><a href="">孕产</a></li>
+				    	    <li><img src="./image/84.png" alt=""><br><a href="">寝居</a></li>
+				    	    <li><img src="./image/85.png" alt=""><br><a href="">喂养</a></li>
+				    	    <li><img src="./image/86.png" alt=""><br><a href="">玩具</a></li>
+				    	    <li><img src="./image/87.png" alt=""><br><a href="">婴童出行</a></li>
+				    	</ul>
+				    	 </div>
+				</li>
+				<li>
+				    <a href="#">文体</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/88.png" alt=""><br><a href="">文具</a></li>
+				    	    <li><img src="./image/89.png" alt=""><br><a href="">运动户外</a></li>
+				    	    <li><img src="./image/90.png" alt=""><br><a href="">唱片</a></li>
+				    	    <li><img src="./image/91.png" alt=""><br><a href="">礼品卡</a></li>
+				    	    <li><img src="./image/92.png" alt=""><br><a href="">游戏点卡</a></li>
+				    	    <li><img src="./image/93.png" alt=""><br><a href="">暴雪周边</a></li>
+				    	    <li><img src="./image/94.png" alt=""><br><a href="">我的世界</a></li>
+				    	    <li><img src="./image/95.png" alt=""><br><a href="">梦幻西游</a></li>
+				    	    <li><img src="./image/96.png" alt=""><br><a href="">大话西游</a></li>
+				    	    <li><img src="./image/97.png" alt=""><br><a href="">阴阳师</a></li>
+				    	    <li><img src="./image/98.png" alt=""><br><a href="">游戏表情</a></li>
+				    	    <li><img src="./image/99.png" alt=""><br><a href="">影视周边</a></li>
+				    	    <li><img src="./image/100.png" alt=""><br><a href="">动漫电玩</a></li>
+				        </ul>
+				         </div>
+				</li>
+				<li>
+				    <a href="#">特色区</a>
+				    <div class="sub-nav">
+				        <ul>
+				    	    <li><img src="./image/101.png" alt=""><br><a href="">日本馆</a></li>
+				    	    <li><img src="./image/102.png" alt=""><br><a href="">韩国馆</a></li>
+				    	    <li><img src="./image/103.png" alt=""><br><a href="">东南亚馆</a></li>
+				    	    <li><img src="./image/104.png" alt=""><br><a href="">欧美馆</a></li>
+				    	    <li><img src="./image/105.png" alt=""><br><a href="">澳新馆</a></li>
+				    	    <li><img src="./image/106.png" alt=""><br><a href="">制造馆</a></li>
+				    	    <li><img src="./image/107.png" alt=""><br><a href="">春风馆</a></li>
+				    	    <li><img src="./image/108.png" alt=""><br><a href="">未央馆</a></li>
+				    	    <li><img src="./image/109.png" alt=""><br><a href="">云音乐周边馆</a></li>
+				    	    <li><img src="./image/110.png" alt=""><br><a href="">严选推荐馆</a></li>
+				    	</ul>
+				    	 </div>
+				</li>
+			</ul>
+		</div>
+		<!-- 广告1开始 -->
+		<div class="banner-1">
+			
+		</div>
+		<!-- 广告1结束 -->
+		<!-- 产品1开始 -->9
+		<div class="products">
+            <h1>品牌制造商</h1>
+		    <div class="biaoti">
+		    	工厂直达消费者，剔除品牌溢价
+		    </div>
+            
+			<ul>
+				<li>
+					<img width=320px height=360px src="./images/24.png" alt="">
+				</li>
+				<li>
+					<img width=320px height=360px src="./images/25.png" alt="">
+				</li>
+				<li>
+					<img width=320px height=175px src="./images/33.jpg" alt="">
+				</li>
+				<li>
+					<img width=320px height=175px src="./images/32.jpg" alt="">
+				</li>
+			</ul>
+		</div>
+		<!-- 产品1结束 -->
+		<div class="products2">
+		    <div class="wrap">
+			    <ul>
+				    <li>
+					   <p>韩国设计 14K金珍珠母贝手链</p>
+					   <span>¥1699</span>
+				    </li>
+				    <li>
+					    <p>珍爱一生 AKOYA珍珠14K项链</p>
+					    <span>¥699</span>
+				    </li>
+				    <li>
+					    <p>科尔马小镇.印花抱枕套</p>
+					    <span>¥166</span>
+				    </li>
+				    <li>
+					    <p>圆盘原木落地灯</p>
+					    <span>¥329</span>
+				    </li>
+			    </ul>
+			</div>
+		</div>
+		<!-- 产品3开始 -->
+		<div class="products3">
+			<div class="wrap">
+			    <div class="renqi-title">
+			        <h1>人气推荐</h1>
+			            <span>编辑推荐</span>
+			            <span>热销总榜</span>
+			            <p>更多推荐></p>
+			    </div> 
+                <ul>
+					<li>
+					    <div class="renqi-img1">
+					    	<img src="./images/1.png" alt="">
+			            </div>
+						 <div class="reqi-wenzi1">
+						 	<p style="font-size:16px;font-weight:700">新色 奢华植鞣头层水牛皮席三件套</p>
+						 	<p style="color:red">¥2024.3</p>
+						 </div>
+					</li>
+					<li>
+					    <div class="renqi-img">
+					    	<img src="./images/2.png" alt="">
+					    </div>
+						<div class="reqi-wenzi">
+						 	<p>24寸 纯PC“铝框”拉杆箱</p>
+						 	<p style="color:red">¥350.1</p>
+						</div>
+					</li>
+					<li>
+					    <div class="renqi-img">
+						    <img src="images/3.png" alt="">
+					    </div>
+						<div class="reqi-wenzi">
+						 	<p>雪尼尔擦手球-3只</p>
+						 	<p style="color:red">¥42.9</p>
+						 </div>
+					</li>
+					<li>
+					    <div class="renqi-img">
+						    <img src="./images/4.png" alt="">
+					    </div>
+						<div class="reqi-wenzi">
+						 	<p>网易智造N520除螨吸尘器</p>
+						 	<p style="color:red">¥499</p>
+						 </div>
+					</li>
+					<li>
+					    <div class="renqi-img">
+						    <img src="./images/5.png" alt="">
+					    </div>
+						<div class="reqi-wenzi">
+						 	<p>色画轻主义男女人字拖</p>
+						 	<p style="color:red">¥19.9</p>
+						 </div>
+					</li>
+					<li>
+					    <div class="renqi-img">
+						    <img src="./images/6.png" alt="">
+					    </div>
+						<div class="reqi-wenzi">
+						 	<p>日式和风声波式电动牙刷</p>
+						 	<p style="color:red">¥129</p>
+						</div>
+				    </li>
+					<li>
+                        <div class="renqi-img">
+						    <img src="./images/7.png" alt="">
+					    </div>
+						<div class="reqi-wenzi">
+						 	<p>美国制造 除甲醛空气净化剂227g</p>
+						 	<p style="color:red">¥42.5</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 产品3结束 -->
+		<div class="products4">
+			<div class="wrap">
+			    <div class="xsg-title">
+			    	<h1>限时购</h1>
+			    	<p>更多抢购></p>
+			    </div>
+			    
+				<ul class="xsg-content">
+					<li>
+					    <img src="./images/98.png" alt="">
+					</li>
+					<li>
+					    <div class="picture">
+					    	<img src="./images/8.png" alt="">
+					    </div>
+						<div class="info">
+							<h3>奇亚籽谷物脆水果燕麦片</h3>
+							<p>缤纷果干,网红颜值</p>
+							<ul class="bar">
+								<li>
+									<div class="progress">
+										<div class="progress-bar"></div>
+									</div>
+								</li>
+								<li>59%</li>
+                            </ul>
+                            <ul class="price">
+                            	<li>
+                            		<p>限时价¥43.9</p>
+                            	</li>
+                            	<li>
+                            		<p>原价 ¥52</p>
+                            	</li>
+                            </ul>
+                            <div class="qg">
+                            	<p>立即抢购</p>
+                            </div>
+						</div>
+					</li>
+					<li>
+					    <div class="picture">
+					    	<img src="./images/9.png" alt="">
+					    </div>
+						<div class="info">
+							<h3>冻干牛肉面 64克*6杯</h3>
+							<p>非油炸 好吃不上火</p>
+							<ul class="bar">
+								<li>
+									<div class="progress">
+										<div class="progress-bar"></div>
+									</div>
+								</li>
+								<li>63%</li>
+                            </ul>
+                            <ul class="price">
+                            	<li>
+                            		<p>限时价¥25</p>
+                            	</li>
+                            	<li>
+                            		<p>原价 ¥28</p>
+                            	</li>
+                            </ul>
+                            <div class="qg">
+                            	<p>立即抢购</p>
+                            </div>
+						</div>
+						
+					</li>
+					<li>
+					    <div class="picture">
+					    	<img src="./images/10.png" alt="">
+					    </div>
+						<div class="info">
+							<h3>全期犬粮 2.0KG</h3>
+							<p>优质食材，薯类膨化多肉配方</p>
+							<ul class="bar">
+								<li>
+									<div class="progress">
+										<div class="progress-bar"></div>
+									</div>
+								</li>
+								<li>63%</li>
+                            </ul>
+                            <ul class="price">
+                            	<li>
+                            		<p>限时价¥69</p>
+                            	</li>
+                            	<li>
+                            		<p>原价 ¥88</p>
+                            	</li>
+                            </ul>
+                            <div class="qg">
+                            	<p>立即抢购</p>
+                            </div>
+						</div>
+						
+					</li>
+					<li>
+					    <div class="picture">
+					    	<img src="images/11.png" alt="">
+					    </div>
+						<div class="info">
+							<h3>亚马逊雨林物语 玻璃杯</h3>
+							<p>夏日绚丽多彩，手握耐冷耐热</p>
+							<ul class="bar">
+								<li>
+									<div class="progress">
+										<div class="progress-bar"></div>
+									</div>
+								</li>
+								<li>63%</li>
+                            </ul>
+                            <ul class="price">
+                            	<li>
+                            		<p>限时价¥62</p>
+                            	</li>
+                            	<li>
+                            		<p>原价 ¥69</p>
+                            	</li>
+                            </ul>
+                            <div class="qg">
+                            	<p>立即抢购</p>
+                            </div>
+						</div>
+						
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 产品6开始 -->
+		<div class="products6">
+			<div class="wrap">
+			    <div class="jiaju-title">
+			    	<h1>居家</h1>
+			        <ul class="jiaju">
+			    	    <li><a href="#">&nbsp;&nbsp;夏凉&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;床品件套&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;被枕&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;家具&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;灯具&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;收纳&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;布艺软装&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;查看更多></a></li>
+			        </ul>
+			    </div>
+			    <ul class="jiaju-pictire">
+					<li>
+						<img src="./images/6.jpg" alt="">
+					</li>
+					<li>
+						<img src="./images/12.png" alt="">
+					</li>
+					<li>
+						<img src="./images/13.png" alt="">
+					</li>
+					<li>
+						<img src="./images/14.png" alt="">
+					</li>
+					<li>
+						<img src="./images/15.png" alt="">
+					</li>
+				</ul>
+				<div class="jiaju-word">
+					<ul class="jiaju-price">
+						<li>
+							<p>舒眠真丝眼罩</p>
+							<p>¥249</p>
+                        </li>
+						<li>
+							<p>抽屉分格式收纳</p>
+							<p>¥9.9</p>
+						</li>
+						<li>
+							<p>日式蓬软太鼓抱枕</p>
+							<p>¥46</p>
+						</li>
+						<li>
+							<p>全期猫粮</p>
+							<p>¥88</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 产品6结束 -->
+		<div class="products7">
+			<div class="wrap">
+			    <div class="xiebao-title">
+			    	<h1>鞋包配饰</h1>
+			        <ul class="xiebao">
+			    	    <li><a href="#">&nbsp;&nbsp;行李箱&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;女士包袋&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;男士包袋&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;钱包&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;女鞋&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;男鞋&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;拖鞋&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看更多></a></li>
+			        </ul>
+			    </div>
+			    <ul class="xiebao-pictire">
+					<li>
+						<img src="./images/9.jpg" alt="">
+					</li>
+					<li>
+						<img src="./images/16.png" alt="">
+					</li>
+					<li>
+						<img src="./images/17.png" alt="">
+					</li>
+					<li>
+						<img src="./images/18.png" alt="">
+					</li>
+					<li>
+						<img src="./images/19.png" alt="">
+					</li>
+				</ul>
+				<div class="xiebao-word">
+					<ul class="xiebao-price">
+						<li>
+							<p>牛皮方形锁扣马鞍包</p>
+							<p>¥399</p>
+                        </li>
+						<li>
+							<p>女士运动鞋</p>
+							<p>¥288</p>
+						</li>
+						<li>
+							<p>女士红皮鞋</p>
+							<p>¥366</p>
+						</li>
+						<li>
+							<p>马卡龙色褶皱感可折叠购物袋</p>
+							<p>29</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="products8">
+			<div class="wrap">
+			    <div class="fuzhuang-title">
+			    	<h1>服装</h1>
+			        <ul class="fuzhuang">
+			    	    <li><a href="#">&nbsp;&nbsp;T恤&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;运动&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;女仔&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;运动装&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;女士上装&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;女士外套&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;女士下装&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看更多></a></li>
+			        </ul>
+			    </div>
+			    <ul class="fuzhuang-pictire">
+					<li>
+						<img src="./images/7.jpg" alt="">
+					</li>
+					<li>
+						<img src="./images/28.png" alt="">
+					</li>
+					<li>
+						<img src="./images/29.png" alt="">
+					</li>
+					<li>
+						<img src="./images/30.png" alt="">
+					</li>
+					<li>
+						<img src="./images/31.png" alt="">
+					</li>
+				</ul>
+				<div class="fuzhuang-word">
+					<ul class="fuzhuang-price">
+						<li>
+							<p>女式复古字母T恤衫</p>
+							<p>¥75</p>
+                        </li>
+						<li>
+							<p>女式短袖条纹T恤</p>
+							<p>¥75</p>
+						</li>
+						<li>
+							<p>女式波浪圆边束腰牛仔A字短裙</p>
+							<p>¥199</p>
+						</li>
+						<li>
+							<p>女式天丝棉弹小脚牛仔裤</p>
+							<p>¥199</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="products9">
+			<div class="wrap">
+			    <div class="dianqi-title">
+			    	<h1>电器</h1>
+			        <ul class="dianqi">
+			    	    <li><a href="#">&nbsp;&nbsp;生活电器&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;厨房电器&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;个人健康&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;数码&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;影音娱乐&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看更多></a></li>
+			        </ul>
+			    </div>
+			    <ul class="dianqi-pictire">
+					<li>
+						<img src="./images/14.jpg" alt="">
+					</li>
+					<li>
+						<img src="./images/20.png" alt="">
+					</li>
+					<li>
+						<img src="./images/21.png" alt="">
+					</li>
+					<li>
+						<img src="./images/22.png" alt="">
+					</li>
+					<li>
+						<img src="./images/23.png" alt="">
+					</li>
+				</ul>
+				<div class="dianqi-word">
+					<ul class="dianqi-price">
+						<li>
+							<p>电动硅胶刷毛双头洁面仪</p>
+							<p>¥239</p>
+                        </li>
+						<li>
+							<p>网易智造苹果快充数据线</p>
+							<p>¥59</p>
+						</li>
+						<li>
+							<p>便携手持挂烫机</p>
+							<p>¥119</p>
+						</li>
+						<li>
+							<p>电动式硅胶洁面仪</p>
+							<p>¥113</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="products10">
+			<div class="wrap">
+			    <div class="xihu-title">
+			    	<h1>洗护</h1>
+			        <ul class="xihu">
+			    	    <li><a href="#">&nbsp;&nbsp;纸品湿巾&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;家庭清洁&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;生理用品&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;浴室用具&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;毛巾&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;美妆&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;香氛&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看更多></a></li>
+			        </ul>
+			    </div>
+			    <ul class="xihu-pictire">
+					<li>
+						<img src="./images/15.jpg" alt="">
+					</li>
+					<li>
+						<img src="./images/33.png" alt="">
+					</li>
+					<li>
+						<img src="./images/34.png" alt="">
+					</li>
+					<li>
+						<img src="./images/35.png" alt="">
+					</li>
+					<li>
+						<img src="./images/36.png" alt="">
+					</li>
+				</ul>
+				<div class="xihu-word">
+					<ul class="xihu-price">
+						<li>
+							<p>网易严选 水光气垫精华粉底霜</p>
+							<p>¥239</p>
+                        </li>
+						<li>
+							<p>美国制造 除甲醛空气净化剂</p>
+							<p>¥114</p>
+						</li>
+						<li>
+							<p>日本制造 天然草本睡眠足贴</p>
+							<p>¥69</p>
+						</li>
+						<li>
+							<p>谷风一木 小卷纸</p>
+							<p>¥26</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="products11">
+			<div class="wrap">
+			    <div class="yinshi-title">  
+			        <h1>饮食</h1>
+			        <ul class="yinshi">
+			    	    <li><a href="#">&nbsp;&nbsp;甜品鲜花&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;糕点&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;小食&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;坚果炒货&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;果干&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;肉类零食&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;冲饮&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看更多></a></li>
+			        </ul>
+			    </div>
+				<ul class="yinshi-pictire">
+					<li>
+						<img src="./images/16.jpg" alt="">
+					</li>
+					<li>
+						<img src="./images/37.png" alt="">
+					</li>
+					<li>
+						<img src="./images/38.png" alt="">
+					</li>
+					<li>
+						<img src="./images/39.png" alt="">
+					</li>
+					<li>
+						<img src="./images/40.png" alt="">
+					</li>
+				</ul>
+				<div class="yinshi-word">
+					<ul class="yinshi-price">
+						<li>
+							<p>爱的乐章黑巧克力礼盒</p>
+							<p>¥139</p>
+                        </li>
+						<li>
+							<p>天然酵母面包</p>
+							<p>¥38</p>
+						</li>
+						<li>
+							<p>纯牛奶 250毫升*24盒</p>
+							<p>¥88</p>
+						</li>
+						<li>
+							<p>脆脆虾 20克</p>
+							<p>¥17</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="products12">
+			<div class="wrap">
+			     <div class="canchu-title">  
+			        <h1>餐厨</h1>
+			        <ul class="canchu">
+			    	    <li><a href="#">&nbsp;&nbsp;水具杯壶&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;餐具&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;锅具&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;清洁保鲜&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;厨房配件&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;刀剪砧板&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;咖啡酒具&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看更多></a></li>
+			        </ul>
+			    </div>
+			    <ul class="canchu-pictire">
+					<li>
+						<img src="./images/17.jpg" alt="">
+					</li>
+					<li>
+						<img src="./images/41.png" alt="">
+					</li>
+					<li>
+						<img src="./images/42.png" alt="">
+					</li>
+					<li>
+						<img src="./images/43.png" alt="">
+					</li>
+					<li>
+						<img src="./images/44.png" alt="">
+					</li>
+				</ul>
+				<div class="canchu-word">
+					<ul class="canchu-price">
+						<li>
+							<p>影青玉泥功夫茶组</p>
+							<p>¥499</p>
+                        </li>
+						<li>
+							<p>德式轻量保温杯</p>
+							<p>¥199</p>
+						</li>
+						<li>
+							<p>双底面淘米洗菜篮</p>
+							<p>¥30</p>
+						</li>
+						<li>
+							<p>钻石系列煎饼盘</p>
+							<p>¥89</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="products13">
+			<div class="wrap">
+			    <div class="yingtong-title">  
+			        <h1>婴童</h1>
+			        <ul class="yingtong">
+			    	    <li><a href="#">&nbsp;&nbsp;暑期好物&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;新生儿服装&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;小童服装&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;中大童服装&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;内衣搭配&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;童鞋童包&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;婴童洗护&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看更多></a></li>
+			        </ul>
+			    </div>
+			    <ul class="yingtong-pictire">
+					<li>
+						<img src="./images/18.jpg" alt="">
+					</li>
+					<li>
+						<img src="./images/45.png" alt="">
+					</li>
+					<li>
+						<img src="./images/46.png" alt="">
+					</li>
+					<li>
+						<img src="./images/47.png" alt="">
+					</li>
+					<li>
+						<img src="./images/48.png" alt="">
+					</li>
+				</ul>
+				<div class="yingtong-word">
+					<ul class="yingtong-price">
+						<li>
+							<p>4件装 极软纱 纯棉打底T恤</p>
+							<p>¥90</p>
+                        </li>
+						<li>
+							<p>婴幼儿手口湿巾80片</p>
+							<p>¥46</p>
+						</li>
+						<li>
+							<p>糖果系竹制小车飞机</p>
+							<p>¥19</p>
+						</li>
+						<li>
+							<p>亲肤海魂打底衫</p>
+							<p>¥49</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="products14">
+			<div class="wrap">
+			    <div class="wenti-title">  
+			        <h1>文体</h1>
+			        <ul class="wenti">
+			    	    <li><a href="#">&nbsp;&nbsp;文具&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;运动户外&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;唱片&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;礼品卡&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;游戏点卡&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;暴雪周边&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;我的世界&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看更多></a></li>
+			        </ul>
+			    </div>
+			    <ul class="wenti-pictire">
+					<li>
+						<img src="./images/19.jpg" alt="">
+					</li>
+					<li>
+					   <img src="./images/49.png" alt="">
+					</li>
+					<li>
+						<img src="./images/50.png" alt="">
+					</li>
+					<li>
+						<img src="./images/51.png" alt="">
+					</li>
+					<li>
+						<img src="./images/52.png" alt="">
+					</li>
+				</ul>
+				<div class="wenti-word">
+					<ul class="wenti-price">
+						<li>
+							<p>弹力编织休闲腰带 网易游戏</p>
+							<p>¥90</p>
+                        </li>
+						<li>
+							<p>微孔头水性笔</p>
+							<p>¥8</p>
+						</li>
+						<li>
+							<p>严选礼品卡 1000元面值</p>
+							<p>¥1000</p>
+						</li>
+						<li>
+							<p>防水便携运动包</p>
+							<p>¥49</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="products15">
+			<div class="wrap">
+                <div class="tese-title">  
+			        <h1>特色区</h1>
+			        <ul class="tese">
+			    	    <li><a href="#">&nbsp;&nbsp;日本馆&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;韩国馆&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;东南亚馆&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;欧美馆&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;澳新馆&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;智造馆&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;春风馆&nbsp;&nbsp;/</a></li>
+			    	    <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看更多></a></li>
+			        </ul>
+			    </div>
+			    <ul class="tese-pictire">
+					<li>
+						<img src="./images/20.jpg" alt="">
+					</li>
+					<li>
+						<img src="./images/53.png" alt="">
+					</li>
+					<li>
+						<img src="./images/54.png" alt="">
+					</li>
+					<li>
+						<img src="./images/55.png" alt="">
+					</li>
+					<li>
+						<img src="./images/56.png" alt="">
+					</li>
+				</ul>
+				<div class="tese-word">
+					<ul class="tese-price">
+						<li>
+							<p>珍珠母贝项链</p>
+							<p>¥790</p>
+                        </li>
+						<li>
+							<p>泰国制造 分区颗粒乳胶枕</p>
+							<p>¥129</p>
+						</li>
+						<li>
+							<p>网易智造冠军派电池</p>
+							<p>¥13</p>
+						</li>
+						<li>
+							<p>法国制造 莫奈星金啤酒</p>
+							<p>¥229</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="products16">
+			<div class="wrap">
+			    <h1>甄选家</h1>
+				<ul>
+					<li>
+						<img src="./images/21.jpg" alt="">
+					</li>
+					<li>
+						<img src="./images/22.jpg" alt="">
+					</li>
+					<li>
+						<img src="./images/23.jpg" alt="">
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="aside">
+			<ul>
+				<li>
+					<img width="80px" src="./images/1.gif" alt="">
+				</li>
+				<li>
+				    <div class="lipin">
+				    	<i class="iconfont icon-lipin"></i>
+				    	<p>新人有礼</p>
+				    </div>
+				    <!-- <p>新人有礼</p> -->
+				    <img width="80px" src="./images/64.png" alt="">
+				    <a href="#">扫码领</a>
+				    <a href="#">APP1000元新人礼</a>
+				</li>
+				<li>
+				    <div class="yanxuan">
+					    <div class="dingyue">
+				    	    <i class="iconfont icon-dingyue"></i>
+				        </div>
+                        <a href="#">订阅电子刊</a>
+				    </div>
+                   
+				</li>
+				<li>
+					<div class="yanxuan">
+                        <div class="kefu">
+                            <i class="iconfont icon-kefu"></i>
+                        </div>
+				    	<a href="#">在线客服</a>
+				    </div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="top">
+            <div class="top-content">
+            	<ul>
+				    <li>
+				    	<h3>客户服务</h3>
+                        <ul class="serve">
+                        	<li class="zaixian">
+                        	    <i class="iconfont icon-kefu"></i>
+                        	    <p>在线客服</p>
+                            </li>
+                            <li  class="yonghu">
+                        	    <i class="iconfont icon-fankui"></i>
+                        	    <p>用户反馈</p>
+                            </li>
+                        </ul>
+                    </li>
+				    <li>
+				    	<h3>何为严选</h3>
+				    	<p>网易原创生活类电商品牌，秉承网易一贯的严谨态<br>
+				    	   度，我们深入世界各地，从源头全程严格把控商品<br>
+				    	   生产环节，力求帮消费者甄选到优质的商品
+				    	</p>
+				    	<div class="guanzhu">
+				    	    <p>关注我们 :</p>
+				    	    <i class="iconfont icon-weibo1" style="color:red"></i>
+				    	    <i class="iconfont icon-yixin1" style="color:blue"></i>
+				    	    <i class="iconfont icon-weixin" style="color:green"></i>
+				    	    
+				    	</div>
+				    </li>
+				    <li>
+				    	<h3>扫码下载严选APP</h3>
+				    	<img src="./images/0.png" alt="">
+                        <p>下载领1000元新人礼包</p>
+				    </li>
+			    </ul>
+            </div>
+		</div>
+		<div class="bottom">
+			<div class="one">
+			    <ul>
+			    	<li>
+			    		<div class="circle">
+			    			<i class="iconfont icon-anquan"></i>
+			    		</div>
+			    	    <p>30天无忧退换货</p>
+			    	</li>
+			    	<li>
+			    		<div class="circle">
+			    			<i class="iconfont icon-huoche"></i>
+			    		</div>
+			    	    <p>满88元免邮费</p>
+			    	</li>
+			    	<li>
+			    		<div class="circle">
+			    			<i class="iconfont icon-yi"></i>
+			    		</div>
+					    <p>网易品质保证</p>
+			    	</li>
+			    </ul>
+			    
+			</div>
+			<div class="two">
+				<ul class="links">
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">帮助中心</a></li>
+					<li><a href="#">售后服务</a></li>
+					<li><a href="#">配送与验收</a></li>
+					<li><a href="#">商务合作</a></li>
+					<li><a href="#">企业采购</a></li>
+					<li><a href="#">开放平台</a></li>
+					<li><a href="#">搜索推荐</a></li>
+					<li><a href="#">友情链接</a></li>
+				</ul>
+				<p>网易公司版权所有 © 1997-2018   食品经营许可证：JY13301080111719 出版物经营许可证：新出发滨字第0132号 单用途商业预付卡备案证：330100AAC0024</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
